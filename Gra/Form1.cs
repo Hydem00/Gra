@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,11 +17,18 @@ namespace Gra
         {
             InitializeComponent();
             WidocznoscPaneli();
-            MediaPlayer.URL = (@"C:\Users\barte\Desktop\2 semestr inf\Metodologia Programowania\Projekty\ProjektGry\Gra\Gra\Resources\Simple - Patrick Patrikios (online-audio-converter.com).wav");
+
+            string path = Path.GetFullPath(@"..\..\..\..\Simple - Patrick Patrikios (online-audio-converter.com).wav");
+
+            MediaPlayer.URL = path;
+
+            MediaPlayer.settings.setMode("loop", true);
+
             MediaPlayer.controls.play();
             axWindowsMediaPlayer1.Hide();
 
         }
+
 
         public static WMPLib.WindowsMediaPlayer MediaPlayer = new WMPLib.WindowsMediaPlayer();
 
