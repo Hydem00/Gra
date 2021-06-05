@@ -25,6 +25,9 @@ namespace Gra
             MediaPlayer.settings.setMode("loop", true);
 
             MediaPlayer.controls.play();
+
+            MediaPlayer.settings.volume = 10;
+
             axWindowsMediaPlayer1.Hide();
 
         }
