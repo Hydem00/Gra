@@ -18,7 +18,7 @@ namespace Gra
             InitializeComponent();
             WidocznoscPaneli();
 
-            string path = Path.GetFullPath(@"..\..\..\..\Simple - Patrick Patrikios (online-audio-converter.com).wav");
+            string path = Path.GetFullPath(@"..\..\Resources\Simple - Patrick Patrikios (online-audio-converter.com).wav");
 
             MediaPlayer.URL = path;
 
