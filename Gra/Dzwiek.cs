@@ -22,5 +22,21 @@ namespace Gra
             Form1.MediaPlayer.controls.play();
             Form1.MediaPlayer.settings.volume = trackBar1.Value;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Form1.MediaPlayer.settings.mute == true)
+            {
+                button1.Text = "Wycisz";
+                trackBar1.Enabled = true;
+                Form1.MediaPlayer.settings.mute = false;
+            }
+            else
+            {
+                button1.Text = "Odcisz";
+                trackBar1.Enabled = false;
+                Form1.MediaPlayer.settings.mute = true;
+            }     
+        }
     }
 }
