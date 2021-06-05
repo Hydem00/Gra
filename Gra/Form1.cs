@@ -32,6 +32,11 @@ namespace Gra
 
         }
 
+        public void Audio()
+        {
+            var audio = new System.Media.SoundPlayer("..\\..\\Resources\\Click.wav");
+            audio.Play();
+        }
 
         public static WMPLib.WindowsMediaPlayer MediaPlayer = new WMPLib.WindowsMediaPlayer();
 
@@ -69,6 +74,7 @@ namespace Gra
         #region Start
         private void StartButton_Click(object sender, EventArgs e)
         {
+            Audio();
             PokazOpcje(StartPanel);
         }
         
@@ -79,21 +85,24 @@ namespace Gra
         
         private void ZatwierdzButton_Click(object sender, EventArgs e)
         {
+            Audio();
             Gra graj = new Gra();
             graj.ShowDialog();
-            System.Media.SoundPlayer dzwiek = new System.Media.SoundPlayer(@"C:\Users\barte\Desktop\2 semestr inf\Metodologia Programowania\Projekty\ProjektGry\Gra\Gra\Resources\Frisbee Throw (online-audio-converter.com).wav");
-            dzwiek.Play();
+            //System.Media.SoundPlayer dzwiek = new System.Media.SoundPlayer(@"C:\Users\barte\Desktop\2 semestr inf\Metodologia Programowania\Projekty\ProjektGry\Gra\Gra\Resources\Frisbee Throw (online-audio-converter.com).wav");
+            //dzwiek.Play();
         }
         #endregion
 
         #region Opcje
         private void OpcjeButton_Click(object sender, EventArgs e)
         {
+            Audio();
             PokazOpcje(OpcjePanel);
         }
 
         private void DzwiekButton_Click(object sender, EventArgs e)
         {
+            Audio();
             SchowajOpcje();
             Dzwiek UstawieniaDzwieku = new Dzwiek();
             UstawieniaDzwieku.ShowDialog();
@@ -101,6 +110,7 @@ namespace Gra
 
         private void GrafikaButton_Click(object sender, EventArgs e)
         {
+            Audio();
             SchowajOpcje();
             Grafika UstawieniaGraficzne = new Grafika();
             UstawieniaGraficzne.ShowDialog();
@@ -108,6 +118,7 @@ namespace Gra
 
         private void InstrukcjaButton_Click(object sender, EventArgs e)
         {
+            Audio();
             SchowajOpcje();
             Instrukcja InstrukcjaGry = new Instrukcja();
             InstrukcjaGry.ShowDialog();
@@ -117,6 +128,7 @@ namespace Gra
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
+            Audio();
             Application.Exit();
         }
 
