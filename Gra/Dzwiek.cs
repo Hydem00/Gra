@@ -15,11 +15,16 @@ namespace Gra
         public Dzwiek()
         {
             InitializeComponent();
+
             //w
+
+            //test
+
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
+            int cos;
             Form1.MediaPlayer.controls.play();
             Form1.MediaPlayer.settings.volume = trackBar1.Value;
         }
