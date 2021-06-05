@@ -15,11 +15,6 @@ namespace Gra
         public Dzwiek()
         {
             InitializeComponent();
-
-            //w
-
-            //test
-
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
