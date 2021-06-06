@@ -56,6 +56,7 @@ namespace Gra
             // 
             // Menu
             // 
+            resources.ApplyResources(this.Menu, "Menu");
             this.Menu.BackColor = System.Drawing.SystemColors.InfoText;
             this.Menu.Controls.Add(this.panelStopka);
             this.Menu.Controls.Add(this.ExitButton);
@@ -64,7 +65,6 @@ namespace Gra
             this.Menu.Controls.Add(this.StartPanel);
             this.Menu.Controls.Add(this.StartButton);
             this.Menu.Controls.Add(this.panelNaglowek);
-            resources.ApplyResources(this.Menu, "Menu");
             this.Menu.Name = "Menu";
             // 
             // panelStopka
@@ -82,11 +82,11 @@ namespace Gra
             // 
             // OpcjePanel
             // 
+            resources.ApplyResources(this.OpcjePanel, "OpcjePanel");
             this.OpcjePanel.BackColor = System.Drawing.Color.Gray;
             this.OpcjePanel.Controls.Add(this.InstrukcjaButton);
             this.OpcjePanel.Controls.Add(this.GrafikaButton);
             this.OpcjePanel.Controls.Add(this.DzwiekButton);
-            resources.ApplyResources(this.OpcjePanel, "OpcjePanel");
             this.OpcjePanel.Name = "OpcjePanel";
             // 
             // InstrukcjaButton
@@ -120,11 +120,11 @@ namespace Gra
             // 
             // StartPanel
             // 
+            resources.ApplyResources(this.StartPanel, "StartPanel");
             this.StartPanel.BackColor = System.Drawing.Color.Gray;
             this.StartPanel.Controls.Add(this.WielkoscPlanszy);
             this.StartPanel.Controls.Add(this.label1);
             this.StartPanel.Controls.Add(this.ZatwierdzButton);
-            resources.ApplyResources(this.StartPanel, "StartPanel");
             this.StartPanel.Name = "StartPanel";
             // 
             // WielkoscPlanszy
@@ -155,9 +155,9 @@ namespace Gra
             // 
             // panelNaglowek
             // 
+            resources.ApplyResources(this.panelNaglowek, "panelNaglowek");
             this.panelNaglowek.BackColor = System.Drawing.SystemColors.InfoText;
             this.panelNaglowek.Controls.Add(this.axWindowsMediaPlayer1);
-            resources.ApplyResources(this.panelNaglowek, "panelNaglowek");
             this.panelNaglowek.Name = "panelNaglowek";
             // 
             // axWindowsMediaPlayer1
