@@ -52,8 +52,8 @@ namespace Gra
 
         void button_click(object sender, EventArgs e)
         {
-            x = ((Button)sender).TabIndex / (int)_form1.wielkosc;
-            y = ((Button)sender).TabIndex % (int)_form1.wielkosc;
+            x = ((Button)sender).TabIndex / (int)_form1.wielkosc + 1;
+            y = ((Button)sender).TabIndex % (int)_form1.wielkosc + 1;
             label1.Text = string.Format("x={0} y={1}", x, y);
 
         }
