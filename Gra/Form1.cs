@@ -13,6 +13,8 @@ namespace Gra
 {
     public partial class Form1 : Form
     {
+        public int wielkosc;
+
         public Form1()
         {
             //
@@ -30,6 +32,10 @@ namespace Gra
             MediaPlayer.settings.volume = 10;
 
             axWindowsMediaPlayer1.Hide();
+
+            WielkoscPlanszy.Minimum = 2;
+            WielkoscPlanszy.Value = 2;
+            WielkoscPlanszy.Maximum = 10;
 
         }
 
@@ -81,13 +87,14 @@ namespace Gra
         
         private void WielkoscPlanszy_ValueChanged(object sender, EventArgs e)
         {
-
+            wielkosc = (int)WielkoscPlanszy.Value;
         }
-        
-        private void ZatwierdzButton_Click(object sender, EventArgs e)
+
+        protected void ZatwierdzButton_Click(object sender, EventArgs e)
         {
             Audio();
-            Gra graj = new Gra();
+            var graj = new Gra(this);
+            //Gra graj = new Gra(WielkoscPlanszy);
             graj.ShowDialog();
             //System.Media.SoundPlayer dzwiek = new System.Media.SoundPlayer(@"C:\Users\barte\Desktop\2 semestr inf\Metodologia Programowania\Projekty\ProjektGry\Gra\Gra\Resources\Frisbee Throw (online-audio-converter.com).wav");
             //dzwiek.Play();
