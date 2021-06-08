@@ -19,7 +19,7 @@ namespace Gra
 
         Button[,] pola_button;
         List<Button> podswietlony = new List<Button>();
-        List<Button> wybrany = new List<Button>();
+        //List<Button> wybrany = new List<Button>();
 
         public Gra(Form1 form1)
         {
@@ -60,7 +60,12 @@ namespace Gra
             y = ((Button)sender).TabIndex % (int)_form1.wielkosc + 1;
             label1.Text = string.Format("x={0} y={1}", x, y);
 
-            wybrany.Add(pola_button[x - 1, y - 1]);
+            //ybrany.Add(pola_button[x - 1, y - 1]);
+
+            if (podswietlony.Any())
+            {
+                SprawdzWynik(x,y);
+            }
 
         }
 
@@ -114,12 +119,6 @@ namespace Gra
 
         private void buttonDalej_Click(object sender, EventArgs e)
         {
-            if (podswietlony.Any() && wybrany.Any())
-            {
-                SprawdzWynik();
-            }
-
-            wybrany.Clear();
 
             buttonDalej.Enabled = false;
             panelGra.Enabled = false;
@@ -136,18 +135,11 @@ namespace Gra
             panelGra.Enabled = true;
             buttonDalej.Enabled = true;
 
-
-            //int index = rnd.Next(_form1.wielkosc - 1, _form1.wielkosc -1);
-
         }
 
-        private void SprawdzWynik()
+        private void SprawdzWynik(int x, int y)
         {
-            if (Enumerable.SequenceEqual(wybrany, podswietlony))
-            {
-                MessageBox.Show("Są równe", "Dobrze");
-            }
-            else
+            if (!podswietlony.Contains(pola_button[x-1,y-1]))
             {
                 MessageBox.Show("Nope", "Źle");
             }
