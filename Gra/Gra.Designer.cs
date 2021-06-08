@@ -29,9 +29,12 @@ namespace Gra
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelGra = new System.Windows.Forms.Panel();
             this.buttonRozpocznij = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonDalej = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // panelGra
@@ -50,7 +53,7 @@ namespace Gra
             this.buttonRozpocznij.TabIndex = 1;
             this.buttonRozpocznij.Text = "Rozpocznij";
             this.buttonRozpocznij.UseVisualStyleBackColor = true;
-            this.buttonRozpocznij.Click += new System.EventHandler(this.button1_Click);
+            this.buttonRozpocznij.Click += new System.EventHandler(this.buttonRozpocznij_Click);
             // 
             // label1
             // 
@@ -62,12 +65,27 @@ namespace Gra
             this.label1.TabIndex = 2;
             this.label1.Text = "Współrzędne";
             // 
+            // buttonDalej
+            // 
+            this.buttonDalej.Location = new System.Drawing.Point(427, 224);
+            this.buttonDalej.Name = "buttonDalej";
+            this.buttonDalej.Size = new System.Drawing.Size(75, 23);
+            this.buttonDalej.TabIndex = 3;
+            this.buttonDalej.Text = "Dalej";
+            this.buttonDalej.UseVisualStyleBackColor = true;
+            this.buttonDalej.Click += new System.EventHandler(this.buttonDalej_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
             // Gra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(922, 506);
+            this.Controls.Add(this.buttonDalej);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRozpocznij);
             this.Controls.Add(this.panelGra);
@@ -84,5 +102,7 @@ namespace Gra
         private System.Windows.Forms.Panel panelGra;
         private System.Windows.Forms.Button buttonRozpocznij;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonDalej;
+        private System.Windows.Forms.Timer timer1;
     }
 }
