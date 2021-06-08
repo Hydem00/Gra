@@ -15,8 +15,10 @@ namespace Gra
         private Form1 _form1;
         int x, y;
         int end = 3;
+        int i = 0;
 
         Button[,] pola_button;
+        List<Button> podswietlony = new List<Button>();
 
         public Gra(Form1 form1)
         {
@@ -92,19 +94,32 @@ namespace Gra
             }
         }
 
+        private void LosoweGuziki()
+        {
+            
+            Random rnd = new Random();
+            do
+            {
+                i++;
+
+                podswietlony.Add(pola_button[rnd.Next(_form1.wielkosc), rnd.Next(_form1.wielkosc)]);
+
+            } while (i != end);
+
+            end++;
+        }
+
         private void buttonDalej_Click(object sender, EventArgs e)
         {
-            Button podswietlony;
             buttonDalej.Enabled = false;
-            Random rnd = new Random();
-            for (int i = 1; i <= end; i++)
+            LosoweGuziki();
+
+            foreach (var guzik in podswietlony)
             {
-                podswietlony = pola_button[rnd.Next(_form1.wielkosc), rnd.Next(_form1.wielkosc)];
-                podswietlony.BackColor = Color.Yellow;
+                guzik.BackColor = Color.Yellow;
                 wait(1000);
-                podswietlony.BackColor = Color.White;
+                guzik.BackColor = Color.White;
             }
-            end++;
             buttonDalej.Enabled = true;
             
             //int index = rnd.Next(_form1.wielkosc - 1, _form1.wielkosc -1);
