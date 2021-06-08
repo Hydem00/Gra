@@ -17,6 +17,7 @@ namespace Gra
 
         public Form1()
         {
+            //
             InitializeComponent();
             WidocznoscPaneli();
 

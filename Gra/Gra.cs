@@ -19,6 +19,7 @@ namespace Gra
 
         Button[,] pola_button;
         List<Button> podswietlony = new List<Button>();
+        List<Button> wybrany = new List<Button>();
 
         public Gra(Form1 form1)
         {
@@ -29,7 +30,7 @@ namespace Gra
 
         void GenerujButtony(Panel panelGry, Button[,] buttony, int rozmiar)
         {
-            
+
             int nr = 0;
 
             for (int i = 0; i < rozmiar; i++)
@@ -59,6 +60,8 @@ namespace Gra
             y = ((Button)sender).TabIndex % (int)_form1.wielkosc + 1;
             label1.Text = string.Format("x={0} y={1}", x, y);
 
+            wybrany.Add(pola_button[x - 1, y - 1]);
+
         }
 
         private void buttonRozpocznij_Click(object sender, EventArgs e)
@@ -66,10 +69,11 @@ namespace Gra
             pola_button = new Button[_form1.wielkosc, _form1.wielkosc];
 
             GenerujButtony(panelGra, pola_button, _form1.wielkosc);
-            
+
             buttonRozpocznij.Hide();
 
             buttonDalej.Show();
+          
         }
 
         public void wait(int milliseconds)
@@ -96,7 +100,6 @@ namespace Gra
 
         private void LosoweGuziki()
         {
-            
             Random rnd = new Random();
             do
             {
@@ -111,19 +114,43 @@ namespace Gra
 
         private void buttonDalej_Click(object sender, EventArgs e)
         {
+            if (podswietlony.Any() && wybrany.Any())
+            {
+                SprawdzWynik();
+            }
+
+            wybrany.Clear();
+
             buttonDalej.Enabled = false;
+            panelGra.Enabled = false;
             LosoweGuziki();
 
             foreach (var guzik in podswietlony)
             {
+                guzik.BackColor = Color.White;
+                wait(500);
                 guzik.BackColor = Color.Yellow;
-                wait(1000);
+                wait(500);
                 guzik.BackColor = Color.White;
             }
+            panelGra.Enabled = true;
             buttonDalej.Enabled = true;
-            
+
+
             //int index = rnd.Next(_form1.wielkosc - 1, _form1.wielkosc -1);
-            
+
+        }
+
+        private void SprawdzWynik()
+        {
+            if (Enumerable.SequenceEqual(wybrany, podswietlony))
+            {
+                MessageBox.Show("Są równe", "Dobrze");
+            }
+            else
+            {
+                MessageBox.Show("Nope", "Źle");
+            }
         }
     }
 }
