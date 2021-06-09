@@ -21,7 +21,7 @@ namespace Gra
 
         Button[,] pola_button;
         List<Button> podswietlony = new List<Button>();
-        //List<Button> wybrany = new List<Button>();
+        List<Button> wybrany = new List<Button>();
 
         public Gra(Form1 form1)
         {
@@ -80,7 +80,7 @@ namespace Gra
             buttonRozpocznij.Hide();
 
             buttonDalej.Show();
-          
+
         }
 
         public void wait(int milliseconds)
@@ -142,6 +142,9 @@ namespace Gra
             }
             panelGra.Enabled = true;
 
+
+            //int index = rnd.Next(_form1.wielkosc - 1, _form1.wielkosc -1);
+
         }
 
         private void SprawdzWynik(int w)
@@ -151,12 +154,12 @@ namespace Gra
             {
                 if (wybrany[w] == podswietlony[w])
                 {
-                MessageBox.Show("Są równe", "Dobrze");
+                    MessageBox.Show("Są równe", "Dobrze");
                 }
                 else
                 {
-                MessageBox.Show("Nope", "Źle");
-                this.Close();
+                    MessageBox.Show("Nope", "Źle");
+                    this.Close();
                 }
             }
             catch
@@ -165,13 +168,13 @@ namespace Gra
                 this.Close();
             }
 
-            if(spr == end)
+            if (spr == end)
             {
                 buttonDalej.Enabled = true;
                 panelGra.Enabled = false;
                 MessageBox.Show("Dobrze, możesz przejść dalej", "Dobrze");
             }
-                     
+
         }
     }
 }
