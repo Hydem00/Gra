@@ -20,7 +20,7 @@ namespace Gra
 
         Button[,] pola_button;
         List<Button> podswietlony = new List<Button>();
-        List<Button> wybrany = new List<Button>();
+        //List<Button> wybrany = new List<Button>();
 
         public Gra(Form1 form1)
         {
@@ -140,9 +140,6 @@ namespace Gra
             }
             panelGra.Enabled = true;
             buttonDalej.Enabled = true;
-
-
-            //int index = rnd.Next(_form1.wielkosc - 1, _form1.wielkosc -1);
 
         }
 
