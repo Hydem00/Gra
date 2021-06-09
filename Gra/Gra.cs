@@ -121,11 +121,8 @@ namespace Gra
 
         private void buttonDalej_Click(object sender, EventArgs e)
         {
-            //if (podswietlony.Any() && wybrany.Any())
-            //{
-            //    SprawdzWynik();
-            //}
-
+            w = -1;
+            spr = 1;
             wybrany.Clear();
 
             buttonDalej.Enabled = false;
@@ -135,15 +132,12 @@ namespace Gra
             foreach (var guzik in podswietlony)
             {
                 guzik.BackColor = Color.White;
-                wait(500);
+                wait(800);
                 guzik.BackColor = Color.Yellow;
-                wait(500);
+                wait(800);
                 guzik.BackColor = Color.White;
             }
             panelGra.Enabled = true;
-
-
-            //int index = rnd.Next(_form1.wielkosc - 1, _form1.wielkosc -1);
 
         }
 
@@ -154,17 +148,23 @@ namespace Gra
             {
                 if (wybrany[w] == podswietlony[w])
                 {
-                    MessageBox.Show("Są równe", "Dobrze");
+                    wybrany[w].BackColor = Color.Green;
+                    wait(100);
+                    wybrany[w].BackColor = Color.White;
                 }
                 else
                 {
-                    MessageBox.Show("Nope", "Źle");
+                    wybrany[w].BackColor = Color.Red;
+                    MessageBox.Show("GAME OVER", "Źle");
+                    spr = 1;
                     this.Close();
                 }
             }
             catch
             {
-                MessageBox.Show("Nope", "Źle");
+                wybrany[w].BackColor = Color.Red;
+                MessageBox.Show("GAME OVER", "Źle");
+                spr = 1;
                 this.Close();
             }
 
