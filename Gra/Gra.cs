@@ -17,6 +17,7 @@ namespace Gra
         int end = 3;
         int i = 0;
         int w = -1;
+        int spr = 1;
 
         Button[,] pola_button;
         List<Button> podswietlony = new List<Button>();
@@ -27,6 +28,7 @@ namespace Gra
             InitializeComponent();
             _form1 = form1;
             buttonDalej.Hide();
+            panelGra.Enabled = false;
         }
 
         void GenerujButtony(Panel panelGry, Button[,] buttony, int rozmiar)
@@ -64,7 +66,7 @@ namespace Gra
             w++;
 
             wybrany.Add(pola_button[x - 1, y - 1]);
-            
+
             SprawdzWynik(w);
 
         }
@@ -139,7 +141,6 @@ namespace Gra
                 guzik.BackColor = Color.White;
             }
             panelGra.Enabled = true;
-            buttonDalej.Enabled = true;
 
 
             //int index = rnd.Next(_form1.wielkosc - 1, _form1.wielkosc -1);
@@ -148,17 +149,32 @@ namespace Gra
 
         private void SprawdzWynik(int w)
         {
-            if (wybrany[w] == podswietlony[w])
+            spr++;
+            try
             {
+                if (wybrany[w] == podswietlony[w])
+                {
                 MessageBox.Show("Są równe", "Dobrze");
+                }
+                else
+                {
+                MessageBox.Show("Nope", "Źle");
+                this.Close();
+                }
             }
-            else
+            catch
             {
                 MessageBox.Show("Nope", "Źle");
                 this.Close();
             }
 
-            
+            if(spr == end)
+            {
+                buttonDalej.Enabled = true;
+                panelGra.Enabled = false;
+                MessageBox.Show("Dobrze, możesz przejść dalej", "Dobrze");
+            }
+                     
         }
     }
 }
