@@ -16,16 +16,19 @@ namespace Gra
         int x, y;
         int end = 3;
         int i = 0;
+        int w = -1;
+        int spr = 1;
 
         Button[,] pola_button;
         List<Button> podswietlony = new List<Button>();
-        //List<Button> wybrany = new List<Button>();
+        List<Button> wybrany = new List<Button>();
 
         public Gra(Form1 form1)
         {
             InitializeComponent();
             _form1 = form1;
             buttonDalej.Hide();
+            panelGra.Enabled = false;
         }
 
         void GenerujButtony(Panel panelGry, Button[,] buttony, int rozmiar)
@@ -60,12 +63,11 @@ namespace Gra
             y = ((Button)sender).TabIndex % (int)_form1.wielkosc + 1;
             label1.Text = string.Format("x={0} y={1}", x, y);
 
-            //ybrany.Add(pola_button[x - 1, y - 1]);
+            w++;
 
-            if (podswietlony.Any())
-            {
-                SprawdzWynik(x,y);
-            }
+            wybrany.Add(pola_button[x - 1, y - 1]);
+
+            SprawdzWynik(w);
 
         }
 
@@ -78,7 +80,7 @@ namespace Gra
             buttonRozpocznij.Hide();
 
             buttonDalej.Show();
-          
+
         }
 
         public void wait(int milliseconds)
@@ -119,6 +121,9 @@ namespace Gra
 
         private void buttonDalej_Click(object sender, EventArgs e)
         {
+            w = -1;
+            spr = 1;
+            wybrany.Clear();
 
             buttonDalej.Enabled = false;
             panelGra.Enabled = false;
@@ -127,22 +132,49 @@ namespace Gra
             foreach (var guzik in podswietlony)
             {
                 guzik.BackColor = Color.White;
-                wait(500);
+                wait(800);
                 guzik.BackColor = Color.Yellow;
-                wait(500);
+                wait(800);
                 guzik.BackColor = Color.White;
             }
             panelGra.Enabled = true;
-            buttonDalej.Enabled = true;
 
         }
 
-        private void SprawdzWynik(int x, int y)
+        private void SprawdzWynik(int w)
         {
-            if (!podswietlony.Contains(pola_button[x-1,y-1]))
+            spr++;
+            try
             {
-                MessageBox.Show("Nope", "Źle");
+                if (wybrany[w] == podswietlony[w])
+                {
+                    wybrany[w].BackColor = Color.Green;
+                    wait(100);
+                    wybrany[w].BackColor = Color.White;
+                }
+                else
+                {
+                    wybrany[w].BackColor = Color.Red;
+                    MessageBox.Show("GAME OVER", "Źle");
+                    spr = 1;
+                    this.Close();
+                }
             }
+            catch
+            {
+                wybrany[w].BackColor = Color.Red;
+                MessageBox.Show("GAME OVER", "Źle");
+                spr = 1;
+                this.Close();
+            }
+
+            if (spr == end)
+            {
+                buttonDalej.Enabled = true;
+                panelGra.Enabled = false;
+                MessageBox.Show("Dobrze, możesz przejść dalej", "Dobrze");
+            }
+
         }
     }
 }
