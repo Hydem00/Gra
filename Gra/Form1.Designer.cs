@@ -46,6 +46,12 @@ namespace Gra
             this.panelNaglowek = new System.Windows.Forms.Panel();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.serviceController1 = new System.ServiceProcess.ServiceController();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.Menu.SuspendLayout();
             this.OpcjePanel.SuspendLayout();
             this.StartPanel.SuspendLayout();
@@ -56,7 +62,6 @@ namespace Gra
             // 
             // Menu
             // 
-            resources.ApplyResources(this.Menu, "Menu");
             this.Menu.BackColor = System.Drawing.SystemColors.InfoText;
             this.Menu.Controls.Add(this.panelStopka);
             this.Menu.Controls.Add(this.ExitButton);
@@ -65,6 +70,7 @@ namespace Gra
             this.Menu.Controls.Add(this.StartPanel);
             this.Menu.Controls.Add(this.StartButton);
             this.Menu.Controls.Add(this.panelNaglowek);
+            resources.ApplyResources(this.Menu, "Menu");
             this.Menu.Name = "Menu";
             // 
             // panelStopka
@@ -82,11 +88,11 @@ namespace Gra
             // 
             // OpcjePanel
             // 
-            resources.ApplyResources(this.OpcjePanel, "OpcjePanel");
             this.OpcjePanel.BackColor = System.Drawing.Color.Gray;
             this.OpcjePanel.Controls.Add(this.InstrukcjaButton);
             this.OpcjePanel.Controls.Add(this.GrafikaButton);
             this.OpcjePanel.Controls.Add(this.DzwiekButton);
+            resources.ApplyResources(this.OpcjePanel, "OpcjePanel");
             this.OpcjePanel.Name = "OpcjePanel";
             // 
             // InstrukcjaButton
@@ -120,11 +126,17 @@ namespace Gra
             // 
             // StartPanel
             // 
-            resources.ApplyResources(this.StartPanel, "StartPanel");
             this.StartPanel.BackColor = System.Drawing.Color.Gray;
+            this.StartPanel.Controls.Add(this.radioButton3);
+            this.StartPanel.Controls.Add(this.radioButton2);
+            this.StartPanel.Controls.Add(this.radioButton1);
+            this.StartPanel.Controls.Add(this.textBox1);
+            this.StartPanel.Controls.Add(this.label3);
+            this.StartPanel.Controls.Add(this.label2);
             this.StartPanel.Controls.Add(this.WielkoscPlanszy);
             this.StartPanel.Controls.Add(this.label1);
             this.StartPanel.Controls.Add(this.ZatwierdzButton);
+            resources.ApplyResources(this.StartPanel, "StartPanel");
             this.StartPanel.Name = "StartPanel";
             // 
             // WielkoscPlanszy
@@ -155,9 +167,9 @@ namespace Gra
             // 
             // panelNaglowek
             // 
-            resources.ApplyResources(this.panelNaglowek, "panelNaglowek");
             this.panelNaglowek.BackColor = System.Drawing.SystemColors.InfoText;
             this.panelNaglowek.Controls.Add(this.axWindowsMediaPlayer1);
+            resources.ApplyResources(this.panelNaglowek, "panelNaglowek");
             this.panelNaglowek.Name = "panelNaglowek";
             // 
             // axWindowsMediaPlayer1
@@ -165,6 +177,44 @@ namespace Gra
             resources.ApplyResources(this.axWindowsMediaPlayer1, "axWindowsMediaPlayer1");
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            this.label2.UseMnemonic = false;
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            this.label3.UseMnemonic = false;
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            // 
+            // radioButton1
+            // 
+            resources.ApplyResources(this.radioButton1, "radioButton1");
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.TabStop = true;
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            resources.ApplyResources(this.radioButton2, "radioButton2");
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.TabStop = true;
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            resources.ApplyResources(this.radioButton3, "radioButton3");
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.TabStop = true;
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -203,6 +253,12 @@ namespace Gra
         private System.Windows.Forms.Button DzwiekButton;
         private System.Windows.Forms.Panel panelStopka;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 

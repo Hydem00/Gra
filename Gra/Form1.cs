@@ -140,6 +140,5 @@ namespace Gra
             Application.Exit();
         }
 
-        
     }
 }
