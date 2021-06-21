@@ -23,6 +23,7 @@ namespace Gra
             {
                 this.BackColor = colorDialog1.Color;
             }
+            var menu = new Form1(this);
         }
     }
 }
