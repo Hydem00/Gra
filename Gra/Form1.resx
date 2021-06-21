@@ -117,16 +117,641 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelStopka.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panelStopka.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 455</value>
+  </data>
+  <data name="panelStopka.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 53</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelStopka.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panelStopka.Name" xml:space="preserve">
+    <value>panelStopka</value>
+  </data>
+  <data name="&gt;&gt;panelStopka.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelStopka.Parent" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;panelStopka.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ExitButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="ExitButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="ExitButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="ExitButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 413</value>
+  </data>
+  <data name="ExitButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 42</value>
+  </data>
+  <data name="ExitButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="ExitButton.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="&gt;&gt;ExitButton.Name" xml:space="preserve">
+    <value>ExitButton</value>
+  </data>
+  <data name="&gt;&gt;ExitButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ExitButton.Parent" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;ExitButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;InstrukcjaButton.Name" xml:space="preserve">
+    <value>InstrukcjaButton</value>
+  </data>
+  <data name="&gt;&gt;InstrukcjaButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InstrukcjaButton.Parent" xml:space="preserve">
+    <value>OpcjePanel</value>
+  </data>
+  <data name="&gt;&gt;InstrukcjaButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GrafikaButton.Name" xml:space="preserve">
+    <value>GrafikaButton</value>
+  </data>
+  <data name="&gt;&gt;GrafikaButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GrafikaButton.Parent" xml:space="preserve">
+    <value>OpcjePanel</value>
+  </data>
+  <data name="&gt;&gt;GrafikaButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;DzwiekButton.Name" xml:space="preserve">
+    <value>DzwiekButton</value>
+  </data>
+  <data name="&gt;&gt;DzwiekButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DzwiekButton.Parent" xml:space="preserve">
+    <value>OpcjePanel</value>
+  </data>
+  <data name="&gt;&gt;DzwiekButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="OpcjePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="OpcjePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 284</value>
+  </data>
+  <data name="OpcjePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 129</value>
+  </data>
   <data name="OpcjePanel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;OpcjePanel.Name" xml:space="preserve">
+    <value>OpcjePanel</value>
+  </data>
+  <data name="&gt;&gt;OpcjePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpcjePanel.Parent" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;OpcjePanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="OpcjeButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="OpcjeButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="OpcjeButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12.25pt, style=Bold</value>
+  </data>
+  <data name="OpcjeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 242</value>
+  </data>
+  <data name="OpcjeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 42</value>
+  </data>
+  <data name="OpcjeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="OpcjeButton.Text" xml:space="preserve">
+    <value>Opcje</value>
+  </data>
+  <data name="&gt;&gt;OpcjeButton.Name" xml:space="preserve">
+    <value>OpcjeButton</value>
+  </data>
+  <data name="&gt;&gt;OpcjeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpcjeButton.Parent" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;OpcjeButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radioButton3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 38</value>
+  </data>
+  <data name="radioButton3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 17</value>
+  </data>
+  <data name="radioButton3.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="radioButton3.Text" xml:space="preserve">
+    <value>trudny</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.Name" xml:space="preserve">
+    <value>radioButton3</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.Parent" xml:space="preserve">
+    <value>StartPanel</value>
+  </data>
+  <data name="&gt;&gt;radioButton3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButton2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 38</value>
+  </data>
+  <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 17</value>
+  </data>
+  <data name="radioButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="radioButton2.Text" xml:space="preserve">
+    <value>średni</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Name" xml:space="preserve">
+    <value>radioButton2</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Parent" xml:space="preserve">
+    <value>StartPanel</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radioButton1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 38</value>
+  </data>
+  <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 17</value>
+  </data>
+  <data name="radioButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="radioButton1.Text" xml:space="preserve">
+    <value>łatwy</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Name" xml:space="preserve">
+    <value>radioButton1</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Parent" xml:space="preserve">
+    <value>StartPanel</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>695, 38</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>StartPanel</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>691, 0</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 20</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Wprowadź Imię</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>StartPanel</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 0</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 20</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Wybierz poziom trudności</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>StartPanel</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="WielkoscPlanszy.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="WielkoscPlanszy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>399, 38</value>
+  </data>
+  <data name="WielkoscPlanszy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 26</value>
+  </data>
+  <data name="WielkoscPlanszy.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;WielkoscPlanszy.Name" xml:space="preserve">
+    <value>WielkoscPlanszy</value>
   </data>
   <data name="&gt;&gt;WielkoscPlanszy.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="&gt;&gt;WielkoscPlanszy.Parent" xml:space="preserve">
+    <value>StartPanel</value>
+  </data>
+  <data name="&gt;&gt;WielkoscPlanszy.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 20</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Wybierz wielkość planszy</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>StartPanel</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="ZatwierdzButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="ZatwierdzButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="ZatwierdzButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="ZatwierdzButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 75</value>
+  </data>
+  <data name="ZatwierdzButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 25</value>
+  </data>
+  <data name="ZatwierdzButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ZatwierdzButton.Text" xml:space="preserve">
+    <value>Zatwierdź</value>
+  </data>
+  <data name="&gt;&gt;ZatwierdzButton.Name" xml:space="preserve">
+    <value>ZatwierdzButton</value>
+  </data>
+  <data name="&gt;&gt;ZatwierdzButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ZatwierdzButton.Parent" xml:space="preserve">
+    <value>StartPanel</value>
+  </data>
+  <data name="&gt;&gt;ZatwierdzButton.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="StartPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="StartPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 142</value>
+  </data>
+  <data name="StartPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 100</value>
+  </data>
+  <data name="StartPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;StartPanel.Name" xml:space="preserve">
+    <value>StartPanel</value>
+  </data>
+  <data name="&gt;&gt;StartPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StartPanel.Parent" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;StartPanel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="StartButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="StartButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="StartButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12.25pt, style=Bold</value>
+  </data>
+  <data name="StartButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 100</value>
+  </data>
+  <data name="StartButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 42</value>
+  </data>
+  <data name="StartButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="StartButton.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="&gt;&gt;StartButton.Name" xml:space="preserve">
+    <value>StartButton</value>
+  </data>
+  <data name="&gt;&gt;StartButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StartButton.Parent" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;StartButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;axWindowsMediaPlayer1.Name" xml:space="preserve">
+    <value>axWindowsMediaPlayer1</value>
+  </data>
+  <data name="&gt;&gt;axWindowsMediaPlayer1.Type" xml:space="preserve">
+    <value>AxWMPLib.AxWindowsMediaPlayer, AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;axWindowsMediaPlayer1.Parent" xml:space="preserve">
+    <value>panelNaglowek</value>
+  </data>
+  <data name="&gt;&gt;axWindowsMediaPlayer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelNaglowek.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelNaglowek.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panelNaglowek.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 100</value>
+  </data>
+  <data name="panelNaglowek.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelNaglowek.Name" xml:space="preserve">
+    <value>panelNaglowek</value>
+  </data>
+  <data name="&gt;&gt;panelNaglowek.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelNaglowek.Parent" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;panelNaglowek.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Menu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Menu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 506</value>
+  </data>
+  <data name="Menu.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Menu.Name" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;Menu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Menu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Menu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="InstrukcjaButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="InstrukcjaButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="InstrukcjaButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="InstrukcjaButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 84</value>
+  </data>
+  <data name="InstrukcjaButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 42</value>
+  </data>
+  <data name="InstrukcjaButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="InstrukcjaButton.Text" xml:space="preserve">
+    <value>Instrukcja</value>
+  </data>
+  <data name="&gt;&gt;InstrukcjaButton.Name" xml:space="preserve">
+    <value>InstrukcjaButton</value>
+  </data>
+  <data name="&gt;&gt;InstrukcjaButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InstrukcjaButton.Parent" xml:space="preserve">
+    <value>OpcjePanel</value>
+  </data>
+  <data name="&gt;&gt;InstrukcjaButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GrafikaButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GrafikaButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="GrafikaButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="GrafikaButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 42</value>
+  </data>
+  <data name="GrafikaButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 42</value>
+  </data>
+  <data name="GrafikaButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GrafikaButton.Text" xml:space="preserve">
+    <value>Grafika</value>
+  </data>
+  <data name="&gt;&gt;GrafikaButton.Name" xml:space="preserve">
+    <value>GrafikaButton</value>
+  </data>
+  <data name="&gt;&gt;GrafikaButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GrafikaButton.Parent" xml:space="preserve">
+    <value>OpcjePanel</value>
+  </data>
+  <data name="&gt;&gt;GrafikaButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="DzwiekButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="DzwiekButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="DzwiekButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="DzwiekButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="DzwiekButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 42</value>
+  </data>
+  <data name="DzwiekButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="DzwiekButton.Text" xml:space="preserve">
+    <value>Dźwięk</value>
+  </data>
+  <data name="&gt;&gt;DzwiekButton.Name" xml:space="preserve">
+    <value>DzwiekButton</value>
+  </data>
+  <data name="&gt;&gt;DzwiekButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DzwiekButton.Parent" xml:space="preserve">
+    <value>OpcjePanel</value>
+  </data>
+  <data name="&gt;&gt;DzwiekButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="axWindowsMediaPlayer1.Enabled" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="axWindowsMediaPlayer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 32</value>
   </data>
   <data name="axWindowsMediaPlayer1.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -139,455 +764,52 @@
         AAAL
 </value>
   </data>
-  <data name="&gt;&gt;OpcjeButton.Name" xml:space="preserve">
-    <value>OpcjeButton</value>
-  </data>
-  <data name="&gt;&gt;ExitButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OpcjeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 42</value>
-  </data>
-  <data name="ExitButton.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="StartButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 42</value>
-  </data>
-  <data name="WielkoscPlanszy.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;panelStopka.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="StartButton.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="axWindowsMediaPlayer1.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="panelStopka.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;ExitButton.Name" xml:space="preserve">
-    <value>ExitButton</value>
-  </data>
-  <data name="ZatwierdzButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ExitButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="DzwiekButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="GrafikaButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="OpcjeButton.Text" xml:space="preserve">
-    <value>Opcje</value>
-  </data>
-  <data name="&gt;&gt;ZatwierdzButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OpcjeButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;StartPanel.Name" xml:space="preserve">
-    <value>StartPanel</value>
-  </data>
-  <data name="OpcjeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 242</value>
-  </data>
-  <data name="ZatwierdzButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Menu</value>
-  </data>
-  <data name="ExitButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="Menu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="StartButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ZatwierdzButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;WielkoscPlanszy.Name" xml:space="preserve">
-    <value>WielkoscPlanszy</value>
-  </data>
-  <data name="ZatwierdzButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="DzwiekButton.Text" xml:space="preserve">
-    <value>Dźwięk</value>
-  </data>
-  <data name="&gt;&gt;OpcjePanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="OpcjeButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12.25pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;StartButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="GrafikaButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 42</value>
-  </data>
-  <data name="DzwiekButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;InstrukcjaButton.Parent" xml:space="preserve">
-    <value>OpcjePanel</value>
-  </data>
-  <data name="DzwiekButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="GrafikaButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;ExitButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Menu.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panelNaglowek.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="WielkoscPlanszy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 26</value>
-  </data>
-  <data name="&gt;&gt;panelStopka.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="GrafikaButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;WielkoscPlanszy.Parent" xml:space="preserve">
-    <value>StartPanel</value>
-  </data>
-  <data name="&gt;&gt;axWindowsMediaPlayer1.Name" xml:space="preserve">
-    <value>axWindowsMediaPlayer1</value>
-  </data>
-  <data name="ZatwierdzButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 25</value>
-  </data>
-  <data name="&gt;&gt;axWindowsMediaPlayer1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="StartButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="InstrukcjaButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;GrafikaButton.Parent" xml:space="preserve">
-    <value>OpcjePanel</value>
-  </data>
-  <data name="&gt;&gt;WielkoscPlanszy.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;InstrukcjaButton.Name" xml:space="preserve">
-    <value>InstrukcjaButton</value>
-  </data>
-  <data name="GrafikaButton.Text" xml:space="preserve">
-    <value>Grafika</value>
-  </data>
-  <data name="&gt;&gt;panelNaglowek.Name" xml:space="preserve">
-    <value>panelNaglowek</value>
-  </data>
-  <data name="&gt;&gt;GrafikaButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panelStopka.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 0</value>
-  </data>
-  <data name="ExitButton.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
   <data name="axWindowsMediaPlayer1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
-  </data>
-  <data name="DzwiekButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;StartButton.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="InstrukcjaButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 84</value>
-  </data>
-  <data name="&gt;&gt;GrafikaButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panelNaglowek.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;OpcjeButton.Parent" xml:space="preserve">
-    <value>Menu</value>
-  </data>
-  <data name="&gt;&gt;StartPanel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;panelStopka.Parent" xml:space="preserve">
-    <value>Menu</value>
-  </data>
-  <data name="&gt;&gt;OpcjePanel.Parent" xml:space="preserve">
-    <value>Menu</value>
-  </data>
-  <data name="ZatwierdzButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;Menu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="StartPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 100</value>
-  </data>
-  <data name="&gt;&gt;Menu.Name" xml:space="preserve">
-    <value>Menu</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="Menu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="OpcjePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="GrafikaButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="StartButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 100</value>
-  </data>
-  <data name="StartPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="ExitButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 413</value>
-  </data>
-  <data name="&gt;&gt;axWindowsMediaPlayer1.Parent" xml:space="preserve">
-    <value>panelNaglowek</value>
-  </data>
-  <data name="StartPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;StartPanel.Parent" xml:space="preserve">
-    <value>Menu</value>
-  </data>
-  <data name="&gt;&gt;GrafikaButton.Name" xml:space="preserve">
-    <value>GrafikaButton</value>
   </data>
   <data name="axWindowsMediaPlayer1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="panelNaglowek.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="StartButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 506</value>
-  </data>
-  <data name="&gt;&gt;panelNaglowek.Parent" xml:space="preserve">
-    <value>Menu</value>
-  </data>
-  <data name="&gt;&gt;panelStopka.Name" xml:space="preserve">
-    <value>panelStopka</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="OpcjePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 284</value>
-  </data>
-  <data name="OpcjeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;DzwiekButton.Name" xml:space="preserve">
-    <value>DzwiekButton</value>
-  </data>
-  <data name="OpcjePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 129</value>
-  </data>
-  <data name="panelNaglowek.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="DzwiekButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 42</value>
-  </data>
-  <data name="&gt;&gt;serviceController1.Type" xml:space="preserve">
-    <value>System.ServiceProcess.ServiceController, System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WielkoscPlanszy.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="OpcjeButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;StartButton.Name" xml:space="preserve">
-    <value>StartButton</value>
-  </data>
-  <data name="panelStopka.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 455</value>
-  </data>
-  <data name="WielkoscPlanszy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>399, 38</value>
-  </data>
-  <data name="DzwiekButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;OpcjePanel.Name" xml:space="preserve">
-    <value>OpcjePanel</value>
-  </data>
-  <data name="InstrukcjaButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;InstrukcjaButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ExitButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 42</value>
-  </data>
-  <data name="InstrukcjaButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="ExitButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>StartPanel</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="axWindowsMediaPlayer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 32</value>
-  </data>
-  <data name="GrafikaButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 42</value>
-  </data>
-  <data name="InstrukcjaButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 42</value>
-  </data>
-  <data name="&gt;&gt;serviceController1.Name" xml:space="preserve">
-    <value>serviceController1</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 20</value>
-  </data>
-  <data name="&gt;&gt;InstrukcjaButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;OpcjeButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DzwiekButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panelNaglowek.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 100</value>
-  </data>
-  <data name="&gt;&gt;DzwiekButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;ZatwierdzButton.Parent" xml:space="preserve">
-    <value>StartPanel</value>
-  </data>
-  <data name="StartButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12.25pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;StartPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;axWindowsMediaPlayer1.Name" xml:space="preserve">
+    <value>axWindowsMediaPlayer1</value>
   </data>
   <data name="&gt;&gt;axWindowsMediaPlayer1.Type" xml:space="preserve">
     <value>AxWMPLib.AxWindowsMediaPlayer, AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;StartButton.Parent" xml:space="preserve">
-    <value>Menu</value>
+  <data name="&gt;&gt;axWindowsMediaPlayer1.Parent" xml:space="preserve">
+    <value>panelNaglowek</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;axWindowsMediaPlayer1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="ZatwierdzButton.Text" xml:space="preserve">
-    <value>Zatwierdź</value>
+  <metadata name="serviceController1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>922, 506</value>
   </data>
-  <data name="ZatwierdzButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 75</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
-  <data name="&gt;&gt;OpcjeButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;DzwiekButton.Parent" xml:space="preserve">
-    <value>OpcjePanel</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="panelNaglowek.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="StartPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 142</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Wybierz wielkość planszy</value>
-  </data>
-  <data name="&gt;&gt;ExitButton.Parent" xml:space="preserve">
+  <data name="$this.Text" xml:space="preserve">
     <value>Menu</value>
   </data>
-  <data name="InstrukcjaButton.Text" xml:space="preserve">
-    <value>Instrukcja</value>
+  <data name="&gt;&gt;serviceController1.Name" xml:space="preserve">
+    <value>serviceController1</value>
   </data>
-  <data name="Menu.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;serviceController1.Type" xml:space="preserve">
+    <value>System.ServiceProcess.ServiceController, System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="&gt;&gt;Menu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
   </data>
-  <data name="&gt;&gt;OpcjePanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panelStopka.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 53</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ZatwierdzButton.Name" xml:space="preserve">
-    <value>ZatwierdzButton</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="serviceController1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>
