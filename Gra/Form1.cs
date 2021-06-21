@@ -13,6 +13,7 @@ namespace Gra
 {
     public partial class Form1 : Form
     {
+        private Grafika _kolor = new Grafika();
         public int wielkosc;
 
         public Form1()
@@ -22,6 +23,10 @@ namespace Gra
             WidocznoscPaneli();
 
             string path = Path.GetFullPath(@"..\..\Resources\Simple - Patrick Patrikios (online-audio-converter.com).wav");
+
+            this.BackColor = _kolor.BackColor;
+
+            radioButton1.Checked = true;
 
             MediaPlayer.URL = path;
 
