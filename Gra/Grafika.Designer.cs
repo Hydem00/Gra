@@ -29,7 +29,19 @@ namespace Gra
         /// </summary>
         private void InitializeComponent()
         {
+            this.button1 = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(432, 239);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Zmień kolor";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Grafika
             // 
@@ -37,6 +49,7 @@ namespace Gra
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(922, 506);
+            this.Controls.Add(this.button1);
             this.Name = "Grafika";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grafika";
@@ -45,5 +58,8 @@ namespace Gra
         }
 
         #endregion
+
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
