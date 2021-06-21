@@ -13,10 +13,10 @@ namespace Gra
 {
     public partial class Form1 : Form
     {
-        private Grafika _kolor = new Grafika();
+        private Grafika _grafika;
         public int wielkosc;
 
-        public Form1()
+        public Form1(Grafika grafika)
         {
             //
             InitializeComponent();
@@ -24,7 +24,9 @@ namespace Gra
 
             string path = Path.GetFullPath(@"..\..\Resources\Simple - Patrick Patrikios (online-audio-converter.com).wav");
 
-            this.BackColor = _kolor.BackColor;
+            _grafika = grafika;
+
+            panelNaglowek.BackColor = grafika.BackColor;
 
             radioButton1.Checked = true;
 
