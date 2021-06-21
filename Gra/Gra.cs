@@ -13,7 +13,6 @@ namespace Gra
     public partial class Gra : Form
     {
         private Form1 _form1;
-        private Grafika _kolor = new Grafika();
         int x, y;
         int end = 3;
         int i = 0;
@@ -28,7 +27,6 @@ namespace Gra
         {
             InitializeComponent();
             _form1 = form1;
-            this.BackColor = _kolor.BackColor;
             buttonDalej.Hide();
             panelGra.Enabled = false;
         }
