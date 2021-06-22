@@ -37,7 +37,6 @@ namespace Gra
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.Zapisz = new System.Windows.Forms.Button();
             this.Usun = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
@@ -103,24 +102,15 @@ namespace Gra
             this.label2.TabIndex = 5;
             this.label2.Text = "Tablica Rekordów";
             // 
-            // Zapisz
-            // 
-            this.Zapisz.Location = new System.Drawing.Point(715, 397);
-            this.Zapisz.Name = "Zapisz";
-            this.Zapisz.Size = new System.Drawing.Size(80, 41);
-            this.Zapisz.TabIndex = 6;
-            this.Zapisz.Text = "Zapisz swój wynik";
-            this.Zapisz.UseVisualStyleBackColor = true;
-            this.Zapisz.Click += new System.EventHandler(this.Zapisz_Click);
-            // 
             // Usun
             // 
-            this.Usun.Location = new System.Drawing.Point(814, 406);
+            this.Usun.Location = new System.Drawing.Point(760, 399);
             this.Usun.Name = "Usun";
             this.Usun.Size = new System.Drawing.Size(75, 23);
             this.Usun.TabIndex = 7;
             this.Usun.Text = "Usuń";
             this.Usun.UseVisualStyleBackColor = true;
+            this.Usun.Click += new System.EventHandler(this.Usun_Click);
             // 
             // saveFileDialog1
             // 
@@ -133,7 +123,6 @@ namespace Gra
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(922, 506);
             this.Controls.Add(this.Usun);
-            this.Controls.Add(this.Zapisz);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.buttonDalej);
@@ -143,6 +132,7 @@ namespace Gra
             this.Name = "Gra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gra";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Gra_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,7 +147,6 @@ namespace Gra
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Zapisz;
         private System.Windows.Forms.Button Usun;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
