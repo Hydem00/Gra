@@ -20,8 +20,8 @@ namespace Gra
         int x, y;
         int end = 3;
         int i = 0;
-        int w = -1;
-        int spr = 1;
+        int w;
+        int spr;
 
         Button[,] pola_button;
         List<Button> podswietlony = new List<Button>();
@@ -33,7 +33,7 @@ namespace Gra
             _form1 = form1;
             buttonDalej.Hide();
             panelGra.Enabled = false;
-            listBox1.DataSource = File.ReadAllLines("C:/Users/barte/Desktop/es.txt");
+            //listBox1.DataSource = File.OpenWrite("C:/Users/barte/Desktop/es.txt");
             osoba = new Osoba(listBox1);
             osoba.Nazwa(nazwa);
             naz = nazwa.ToString();
@@ -131,23 +131,92 @@ namespace Gra
 
         private void buttonDalej_Click(object sender, EventArgs e)
         {
-            w = -1;
-            spr = 1;
-            wybrany.Clear();
-
-            buttonDalej.Enabled = false;
-            panelGra.Enabled = false;
-            LosoweGuziki();
-
-            foreach (var guzik in podswietlony)
+            switch (_form1.poziom_trudnosci)
             {
-                guzik.BackColor = Color.White;
-                wait(800);
-                guzik.BackColor = Color.Yellow;
-                wait(800);
-                guzik.BackColor = Color.White;
+                case "łatwy":
+
+                    w = -1;
+                    spr = 1;
+                    wybrany.Clear();
+
+                    buttonDalej.Enabled = false;
+                    panelGra.Enabled = false;
+                    LosoweGuziki();
+
+                    foreach (var guzik in podswietlony)
+                    {
+                        guzik.BackColor = Color.White;
+                        wait(800);
+                        guzik.BackColor = Color.Yellow;
+                        wait(800);
+                        guzik.BackColor = Color.White;
+                    }
+                    panelGra.Enabled = true;
+
+                    break;
+
+                case "średni":
+
+                    w = -1;
+                    spr = 1;
+                    wybrany.Clear();
+
+                    buttonDalej.Enabled = false;
+                    panelGra.Enabled = false;
+                    LosoweGuziki();
+
+                    foreach (var guzik in podswietlony)
+                    {
+                        guzik.BackColor = Color.White;
+                        wait(500);
+                        guzik.BackColor = Color.Yellow;
+                        wait(500);
+                        guzik.BackColor = Color.White;
+                    }
+                    panelGra.Enabled = true;
+
+                    break;
+
+                case "trudny":
+
+                    w = -1;
+                    spr = 1;
+                    wybrany.Clear();
+
+                    buttonDalej.Enabled = false;
+                    panelGra.Enabled = false;
+                    LosoweGuziki();
+
+                    foreach (var guzik in podswietlony)
+                    {
+                        guzik.BackColor = Color.White;
+                        wait(200);
+                        guzik.BackColor = Color.Yellow;
+                        wait(200);
+                        guzik.BackColor = Color.White;
+                    }
+                    panelGra.Enabled = true;
+
+                    break;
+
             }
-            panelGra.Enabled = true;
+            //w = -1;
+            //spr = 1;
+            //wybrany.Clear();
+
+            //buttonDalej.Enabled = false;
+            //panelGra.Enabled = false;
+            //LosoweGuziki();
+
+            //foreach (var guzik in podswietlony)
+            //{
+            //    guzik.BackColor = Color.White;
+            //    wait(800);
+            //    guzik.BackColor = Color.Yellow;
+            //    wait(800);
+            //    guzik.BackColor = Color.White;
+            //}
+            //panelGra.Enabled = true;
 
         }
 
