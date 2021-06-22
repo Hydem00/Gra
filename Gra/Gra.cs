@@ -40,7 +40,7 @@ namespace Gra
                 File.Create("wynik.txt").Close();
             }
 
-            File.Create("temp.txt");
+            File.Create("temp.txt").Close();
 
             var plik = File.ReadAllLines("wynik.txt");
 
@@ -253,6 +253,26 @@ namespace Gra
             }
         }
 
+        private void Usun_Click(object sender, EventArgs e)
+        {
+            int indeks = listBox1.SelectedIndex;
+            osoba.Usun(indeks);
+        }
+
+        private void Gra_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            TextWriter tw = new StreamWriter("temp.txt");
+
+            foreach (String s in listBox1.Items)
+            {
+                tw.WriteLine(s);
+            }
+
+            tw.Close();
+
+            File.Replace("temp.txt", "wynik.txt", "a.txt");
+        }
+
         private void SprawdzWynik(int w)
         {
             spr++;
@@ -269,16 +289,16 @@ namespace Gra
                     wybrany[w].BackColor = Color.Red;
                     MessageBox.Show("GAME OVER", "Źle");
 
-                    TextWriter tw = new StreamWriter("temp.txt");
+                    //TextWriter tw = new StreamWriter("temp.txt");
 
-                    foreach (String s in listBox1.Items)
-                    {
-                        tw.WriteLine(s);
-                    }
+                    //foreach (String s in listBox1.Items)
+                    //{
+                    //    tw.WriteLine(s);
+                    //}
 
-                    tw.Close();
+                    //tw.Close();
 
-                    File.Replace("temp.txt", "wynik.txt", "a.txt");
+                    //File.Replace("temp.txt", "wynik.txt", "a.txt");
 
                     spr = 1;
                     this.Close();

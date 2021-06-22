@@ -44,8 +44,8 @@ namespace Gra
             {
                 string[] tekst;
                 ok = true;
-                lista.SelectedIndex = 0;
-                if (lista.SelectedIndex != 0)
+                lista.SelectedIndex = lista.Items.Count -1;
+                if (lista.SelectedIndex == 0)
                 {
                     MessageBox.Show("Błąd nie wybrano elementu", "Błąd");
                 }
@@ -66,6 +66,11 @@ namespace Gra
                 nazwa.Clear();
                 ok = false;
             }
+        }
+
+        public void Usun(int Indeks)
+        {
+            lista.Items.RemoveAt(Indeks);
         }
     }
 }
