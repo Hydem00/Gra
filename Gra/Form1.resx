@@ -126,7 +126,7 @@
     <value>0, 455</value>
   </data>
   <data name="panelStopka.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 53</value>
+    <value>922, 51</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panelStopka.TabIndex" type="System.Int32, mscorlib">
@@ -185,6 +185,9 @@
   </data>
   <data name="InstrukcjaButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="InstrukcjaButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="InstrukcjaButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 84</value>
@@ -451,16 +454,16 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>691, 0</value>
+    <value>681, 0</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 20</value>
+    <value>150, 20</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Wprowadź Imię</value>
+    <value>Wprowadź Nazwę</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>

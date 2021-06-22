@@ -13,20 +13,14 @@ namespace Gra
 {
     public partial class Form1 : Form
     {
-        private Grafika _grafika;
         public int wielkosc;
 
-        public Form1(Grafika grafika)
+        public Form1()
         {
-            //
             InitializeComponent();
             WidocznoscPaneli();
 
             string path = Path.GetFullPath(@"..\..\Resources\Simple - Patrick Patrikios (online-audio-converter.com).wav");
-
-            _grafika = grafika;
-
-            panelNaglowek.BackColor = grafika.BackColor;
 
             radioButton1.Checked = true;
 
@@ -99,12 +93,19 @@ namespace Gra
 
         protected void ZatwierdzButton_Click(object sender, EventArgs e)
         {
+            if(textBox1.Text == "")
+            {
+                MessageBox.Show("Podaj nazwę", "Błąd");
+            }
+            else
+            {
             Audio();
-            var graj = new Gra(this);
+            var graj = new Gra(this, textBox1);
             //Gra graj = new Gra(WielkoscPlanszy);
             graj.ShowDialog();
             //System.Media.SoundPlayer dzwiek = new System.Media.SoundPlayer(@"C:\Users\barte\Desktop\2 semestr inf\Metodologia Programowania\Projekty\ProjektGry\Gra\Gra\Resources\Frisbee Throw (online-audio-converter.com).wav");
             //dzwiek.Play();
+            }   
         }
         #endregion
 
@@ -147,5 +148,15 @@ namespace Gra
             Application.Exit();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Properties.Settings.Default.FormBackground;
+            panelNaglowek.BackColor = Properties.Settings.Default.PanelColor;
+            OpcjeButton.BackColor = Properties.Settings.Default.PanelColor;
+            StartButton.BackColor = Properties.Settings.Default.PanelColor;
+            ExitButton.BackColor = Properties.Settings.Default.PanelColor;
+            panelStopka.BackColor = Properties.Settings.Default.PanelColor;
+            Menu.BackColor = Properties.Settings.Default.PanelColor;
+        }
     }
 }

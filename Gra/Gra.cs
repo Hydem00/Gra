@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Gra
 {
     public partial class Gra : Form
     {
         private Form1 _form1;
+        public int punkty = 0;
+        public string naz;
+        Osoba osoba;
         int x, y;
         int end = 3;
         int i = 0;
@@ -23,12 +27,18 @@ namespace Gra
         List<Button> podswietlony = new List<Button>();
         List<Button> wybrany = new List<Button>();
 
-        public Gra(Form1 form1)
+        public Gra(Form1 form1, TextBox nazwa)
         {
             InitializeComponent();
             _form1 = form1;
             buttonDalej.Hide();
             panelGra.Enabled = false;
+            listBox1.DataSource = File.ReadAllLines("C:/Users/barte/Desktop/es.txt");
+            osoba = new Osoba(listBox1);
+            osoba.Nazwa(nazwa);
+            naz = nazwa.ToString();
+            osoba.Dodaj();
+            
         }
 
         void GenerujButtony(Panel panelGry, Button[,] buttony, int rozmiar)
@@ -141,6 +151,23 @@ namespace Gra
 
         }
 
+        private void Zapisz_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "Tekstowy|*.txt";
+            saveFileDialog1.ShowDialog();
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            using (StreamWriter zapis = new StreamWriter(saveFileDialog1.FileName))
+            {
+                for (int i = 0; i < listBox1.Items.Count; i++)
+                {
+                    zapis.WriteLine((string)listBox1.Items[i]);
+                }
+            }
+        }
+
         private void SprawdzWynik(int w)
         {
             spr++;
@@ -148,6 +175,9 @@ namespace Gra
             {
                 if (wybrany[w] == podswietlony[w])
                 {
+                    punkty++;
+                    osoba.Punktacja(punkty);
+                    osoba.Edycja();
                     wybrany[w].BackColor = Color.Green;
                     wait(100);
                     wybrany[w].BackColor = Color.White;
