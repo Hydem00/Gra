@@ -39,9 +39,9 @@ namespace Gra
             this.DzwiekButton = new System.Windows.Forms.Button();
             this.OpcjeButton = new System.Windows.Forms.Button();
             this.StartPanel = new System.Windows.Forms.Panel();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.RadioTrudny = new System.Windows.Forms.RadioButton();
+            this.RadioSredni = new System.Windows.Forms.RadioButton();
+            this.RadioLatwy = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -127,9 +127,9 @@ namespace Gra
             // StartPanel
             // 
             this.StartPanel.BackColor = System.Drawing.Color.Gray;
-            this.StartPanel.Controls.Add(this.radioButton3);
-            this.StartPanel.Controls.Add(this.radioButton2);
-            this.StartPanel.Controls.Add(this.radioButton1);
+            this.StartPanel.Controls.Add(this.RadioTrudny);
+            this.StartPanel.Controls.Add(this.RadioSredni);
+            this.StartPanel.Controls.Add(this.RadioLatwy);
             this.StartPanel.Controls.Add(this.textBox1);
             this.StartPanel.Controls.Add(this.label3);
             this.StartPanel.Controls.Add(this.label2);
@@ -139,26 +139,29 @@ namespace Gra
             resources.ApplyResources(this.StartPanel, "StartPanel");
             this.StartPanel.Name = "StartPanel";
             // 
-            // radioButton3
+            // RadioTrudny
             // 
-            resources.ApplyResources(this.radioButton3, "radioButton3");
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.TabStop = true;
-            this.radioButton3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.RadioTrudny, "RadioTrudny");
+            this.RadioTrudny.Name = "RadioTrudny";
+            this.RadioTrudny.TabStop = true;
+            this.RadioTrudny.UseVisualStyleBackColor = true;
+            this.RadioTrudny.CheckedChanged += new System.EventHandler(this.RadioTrudny_CheckedChanged);
             // 
-            // radioButton2
+            // RadioSredni
             // 
-            resources.ApplyResources(this.radioButton2, "radioButton2");
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.RadioSredni, "RadioSredni");
+            this.RadioSredni.Name = "RadioSredni";
+            this.RadioSredni.TabStop = true;
+            this.RadioSredni.UseVisualStyleBackColor = true;
+            this.RadioSredni.CheckedChanged += new System.EventHandler(this.RadioSredni_CheckedChanged);
             // 
-            // radioButton1
+            // RadioLatwy
             // 
-            resources.ApplyResources(this.radioButton1, "radioButton1");
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.RadioLatwy, "RadioLatwy");
+            this.RadioLatwy.Name = "RadioLatwy";
+            this.RadioLatwy.TabStop = true;
+            this.RadioLatwy.UseVisualStyleBackColor = true;
+            this.RadioLatwy.CheckedChanged += new System.EventHandler(this.RadioLatwy_CheckedChanged);
             // 
             // textBox1
             // 
@@ -257,9 +260,9 @@ namespace Gra
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton RadioTrudny;
+        private System.Windows.Forms.RadioButton RadioSredni;
+        private System.Windows.Forms.RadioButton RadioLatwy;
     }
 }
 

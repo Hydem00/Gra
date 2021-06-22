@@ -14,6 +14,7 @@ namespace Gra
     public partial class Form1 : Form
     {
         public int wielkosc;
+        public string poziom_trudnosci;
 
         public Form1()
         {
@@ -22,7 +23,7 @@ namespace Gra
 
             string path = Path.GetFullPath(@"..\..\Resources\Simple - Patrick Patrikios (online-audio-converter.com).wav");
 
-            radioButton1.Checked = true;
+            RadioLatwy.Checked = true;
 
             MediaPlayer.URL = path;
 
@@ -157,6 +158,21 @@ namespace Gra
             ExitButton.BackColor = Properties.Settings.Default.PanelColor;
             panelStopka.BackColor = Properties.Settings.Default.PanelColor;
             Menu.BackColor = Properties.Settings.Default.PanelColor;
+        }
+
+        private void RadioLatwy_CheckedChanged(object sender, EventArgs e)
+        {
+            poziom_trudnosci = RadioLatwy.Text;
+        }
+
+        private void RadioSredni_CheckedChanged(object sender, EventArgs e)
+        {
+            poziom_trudnosci = RadioSredni.Text;
+        }
+
+        private void RadioTrudny_CheckedChanged(object sender, EventArgs e)
+        {
+            poziom_trudnosci = RadioTrudny.Text;
         }
     }
 }
