@@ -126,22 +126,22 @@ namespace Gra
 
             } while (i != end);
 
-            end++;
+            //end++;
         }
 
         private void buttonDalej_Click(object sender, EventArgs e)
         {
             switch (_form1.poziom_trudnosci)
             {
-                case "łatwy":
-
+                case "łatwy":       
                     w = -1;
-                    spr = 1;
+                    spr = 0;
                     wybrany.Clear();
 
                     buttonDalej.Enabled = false;
                     panelGra.Enabled = false;
                     LosoweGuziki();
+                    
 
                     foreach (var guzik in podswietlony)
                     {
@@ -156,14 +156,14 @@ namespace Gra
                     break;
 
                 case "średni":
-
                     w = -1;
-                    spr = 1;
+                    spr = 0;
                     wybrany.Clear();
 
                     buttonDalej.Enabled = false;
                     panelGra.Enabled = false;
                     LosoweGuziki();
+                    
 
                     foreach (var guzik in podswietlony)
                     {
@@ -178,9 +178,8 @@ namespace Gra
                     break;
 
                 case "trudny":
-
                     w = -1;
-                    spr = 1;
+                    spr = 0;
                     wybrany.Clear();
 
                     buttonDalej.Enabled = false;
@@ -244,9 +243,6 @@ namespace Gra
             {
                 if (wybrany[w] == podswietlony[w])
                 {
-                    punkty++;
-                    osoba.Punktacja(punkty);
-                    osoba.Edycja();
                     wybrany[w].BackColor = Color.Green;
                     wait(100);
                     wybrany[w].BackColor = Color.White;
@@ -272,6 +268,31 @@ namespace Gra
                 buttonDalej.Enabled = true;
                 panelGra.Enabled = false;
                 MessageBox.Show("Dobrze, możesz przejść dalej", "Dobrze");
+                switch (_form1.poziom_trudnosci)
+                {
+                    case "łatwy":
+                        punkty++;
+                        osoba.Punktacja(punkty);
+                        osoba.Edycja();
+                        end++;
+                        break;
+
+                    case "średni":
+                        punkty = punkty + 3;
+                        osoba.Punktacja(punkty);
+                        osoba.Edycja();
+                        end = end + 2;
+                        break;
+
+                    case "trudny":
+                        punkty = punkty + 10;
+                        osoba.Punktacja(punkty);
+                        osoba.Edycja();
+                        end = end + 3;
+                        break;
+                        
+                }
+                
             }
 
         }
