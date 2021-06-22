@@ -26,6 +26,7 @@ namespace Gra
         Button[,] pola_button;
         List<Button> podswietlony = new List<Button>();
         List<Button> wybrany = new List<Button>();
+        ListBox dane = new ListBox();
 
         public Gra(Form1 form1, TextBox nazwa)
         {
@@ -33,6 +34,22 @@ namespace Gra
             _form1 = form1;
             buttonDalej.Hide();
             panelGra.Enabled = false;
+
+            if (!File.Exists("wynik.txt"))
+            {
+                File.Create("wynik.txt").Close();
+            }
+
+            File.Create("temp.txt");
+
+            var plik = File.ReadAllLines("wynik.txt");
+
+            foreach (var data in plik)
+            {
+                dane.Items.Add(data);
+                listBox1.Items.Add(data);
+            }
+
             //listBox1.DataSource = File.OpenWrite("C:/Users/barte/Desktop/es.txt");
             osoba = new Osoba(listBox1);
             osoba.Nazwa(nazwa);
@@ -251,6 +268,18 @@ namespace Gra
                 {
                     wybrany[w].BackColor = Color.Red;
                     MessageBox.Show("GAME OVER", "Źle");
+
+                    TextWriter tw = new StreamWriter("temp.txt");
+
+                    foreach (String s in listBox1.Items)
+                    {
+                        tw.WriteLine(s);
+                    }
+
+                    tw.Close();
+
+                    File.Replace("temp.txt", "wynik.txt", "a.txt");
+
                     spr = 1;
                     this.Close();
                 }
