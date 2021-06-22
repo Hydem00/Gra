@@ -19,11 +19,29 @@ namespace Gra
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ColorDialog colorDialog1 = new ColorDialog();
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
+                
+                Properties.Settings.Default.FormBackground = colorDialog1.Color;
+                Properties.Settings.Default.PanelColor = colorDialog1.Color;
+                Properties.Settings.Default.Save();
                 this.BackColor = colorDialog1.Color;
+                panelNaglowek.BackColor = colorDialog1.Color;
             }
-            var menu = new Form1(this);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1(); 
+            f1.Dispose();
+           
+        }
+
+        private void Grafika_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Properties.Settings.Default.FormBackground;
+            panelNaglowek.BackColor = Properties.Settings.Default.PanelColor;
         }
     }
 }
