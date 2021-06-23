@@ -102,8 +102,13 @@ namespace Gra
             {
             Audio();
             var graj = new Gra(this, textBox1);
-            //Gra graj = new Gra(WielkoscPlanszy);
-            graj.ShowDialog();
+                //Gra graj = new Gra(WielkoscPlanszy);
+
+                try { graj.ShowDialog(); }
+                catch { MessageBox.Show("Taki gracz już istnieje", "Błąd"); }
+
+
+            
             //System.Media.SoundPlayer dzwiek = new System.Media.SoundPlayer(@"C:\Users\barte\Desktop\2 semestr inf\Metodologia Programowania\Projekty\ProjektGry\Gra\Gra\Resources\Frisbee Throw (online-audio-converter.com).wav");
             //dzwiek.Play();
             }   
