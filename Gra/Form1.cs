@@ -102,8 +102,13 @@ namespace Gra
             {
             Audio();
             var graj = new Gra(this, textBox1);
-            //Gra graj = new Gra(WielkoscPlanszy);
-            graj.ShowDialog();
+                //Gra graj = new Gra(WielkoscPlanszy);
+
+                try { graj.ShowDialog(); }
+                catch { MessageBox.Show("Taki gracz już istnieje", "Błąd"); }
+
+
+            
             //System.Media.SoundPlayer dzwiek = new System.Media.SoundPlayer(@"C:\Users\barte\Desktop\2 semestr inf\Metodologia Programowania\Projekty\ProjektGry\Gra\Gra\Resources\Frisbee Throw (online-audio-converter.com).wav");
             //dzwiek.Play();
             }   
@@ -147,17 +152,6 @@ namespace Gra
         {
             Audio();
             Application.Exit();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            this.BackColor = Properties.Settings.Default.FormBackground;
-            panelNaglowek.BackColor = Properties.Settings.Default.PanelColor;
-            OpcjeButton.BackColor = Properties.Settings.Default.PanelColor;
-            StartButton.BackColor = Properties.Settings.Default.PanelColor;
-            ExitButton.BackColor = Properties.Settings.Default.PanelColor;
-            panelStopka.BackColor = Properties.Settings.Default.PanelColor;
-            Menu.BackColor = Properties.Settings.Default.PanelColor;
         }
 
         private void RadioLatwy_CheckedChanged(object sender, EventArgs e)

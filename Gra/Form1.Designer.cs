@@ -225,7 +225,6 @@ namespace Gra
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Menu);
             this.Name = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.Menu.ResumeLayout(false);
             this.OpcjePanel.ResumeLayout(false);
             this.StartPanel.ResumeLayout(false);

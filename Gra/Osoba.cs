@@ -9,20 +9,33 @@ namespace Gra
 {
     class Osoba
     {
-        TextBox nazwa;
+        string nazwa;
         ListBox lista;
         int punkty;
-        bool ok;
+        int wielkosc_planszy;
+        string poziom_trudnosci;
+        string temp;
 
         public Osoba(ListBox lista)
         {
             this.lista = lista;
         }
 
-        public void Nazwa(TextBox nazwa)
+        public void Nazwa(string nazwa)
         {
             this.nazwa = nazwa;
         }
+
+        public void Poziom_Trudnosci(string poziom_trudnosci)
+        {
+            this.poziom_trudnosci = poziom_trudnosci;
+        }
+
+        public void Wielkosc_Planszy(int wielkosc_planszy)
+        {
+            this.wielkosc_planszy = wielkosc_planszy;
+        }
+
         public void Punktacja(int pkt)
         {
             punkty = pkt;
@@ -30,42 +43,47 @@ namespace Gra
 
         public void Dodaj()
         {
-            if (nazwa.Text == "" && punkty == ' ')
+            if (nazwa == "" && punkty == ' ')
             {
                 MessageBox.Show("Podaj dane", "Błąd");
             }
             else
-                lista.Items.Add(nazwa.Text + " " + punkty);
+            {
+                lista.Items.Insert(0, nazwa + "\t" + punkty + "\t" + wielkosc_planszy+"x"+wielkosc_planszy + "\t" + poziom_trudnosci);
+            }
         }
 
         public void Edycja()
         {
-            if (!ok)
-            {
-                string[] tekst;
-                ok = true;
-                lista.SelectedIndex = lista.Items.Count -1;
-                if (lista.SelectedIndex == 0)
-                {
-                    MessageBox.Show("Błąd nie wybrano elementu", "Błąd");
-                }
-                else
-                {
-                    tekst = lista.SelectedItem.ToString().Split();
-                    nazwa.Text = tekst[0];
-                    punkty = int.Parse(tekst[1]);
-                }
+            //if (!ok)
+            //{
 
-            }
-            else
-            {
-                var pozycja = 0;
-                lista.Items.RemoveAt(0);
-                string tekst2 = (nazwa.Text + " " + punkty);
+            //    string[] tekst;
+            //    ok = true;
+            //    lista.SelectedIndex = 0;
+            //        tekst = lista.SelectedItem.ToString().Split();
+            //        temp = tekst[0].ToString();
+            //        punkty = int.Parse(tekst[1]);
+
+
+            //}
+            //else
+            //{
+            //    var pozycja = 0;
+            //    lista.Items.RemoveAt(0);
+            //    string tekst2 = (temp + " " + punkty);
+            //    lista.Items.Insert(pozycja, tekst2);
+            //    temp.Clear();
+            //    ok = false;
+            //}
+
+            var pozycja = 0;
+            temp = nazwa;
+            lista.Items.RemoveAt(0);
+                string tekst2 = (temp + "\t" + punkty + "\t" + wielkosc_planszy + "x" + wielkosc_planszy + "\t" + poziom_trudnosci);
                 lista.Items.Insert(pozycja, tekst2);
-                nazwa.Clear();
-                ok = false;
-            }
+                //temp.Clear();
+                //ok = false;
         }
 
         public void Usun(int Indeks)
