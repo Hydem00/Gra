@@ -18,7 +18,7 @@ namespace Gra
         public string naz;
         TextBox nazwa;
         Osoba osoba;
-        int x, y;
+        int wiersz, kolumna;
         int liczba_ruchow = 3;
         int wylosowane_buttony = 0;
         int klikniety_button;
@@ -36,13 +36,22 @@ namespace Gra
             _form1 = form1;
             buttonDalej.Hide();
             panelGra.Enabled = false;
+
             this.nazwa = nazwa;
-            this.BackColor = Properties.Settings.Default.MenuBackground;
+
+            KolorTla();
+
+            label1.Visible = false;
 
             TworzenieRankingu();
             
             DodawanieDoRankingu();
             
+        }
+
+        void KolorTla()
+        {
+            this.BackColor = Properties.Settings.Default.MenuBackground;
         }
 
         void TworzenieRankingu()
@@ -114,13 +123,14 @@ namespace Gra
 
         void button_click(object sender, EventArgs e)
         {
-            x = ((Button)sender).TabIndex / (int)_form1.wielkosc + 1;
-            y = ((Button)sender).TabIndex % (int)_form1.wielkosc + 1;
-            label1.Text = string.Format("x={0} y={1}", x, y);
+            wiersz = ((Button)sender).TabIndex / (int)_form1.wielkosc + 1;
+            kolumna = ((Button)sender).TabIndex % (int)_form1.wielkosc + 1;
+            label1.Text = string.Format("x={0} y={1}", wiersz, kolumna);
+            
 
             klikniety_button++;
 
-            wybrany.Add(pola_button[x - 1, y - 1]);
+            wybrany.Add(pola_button[wiersz - 1, kolumna - 1]);
 
             SprawdzWynik(klikniety_button);
 
