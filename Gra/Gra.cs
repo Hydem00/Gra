@@ -16,13 +16,13 @@ namespace Gra
         private Form1 _form1;
         public int punkty = 0;
         public string naz;
+        TextBox nazwa;
         Osoba osoba;
         int x, y;
         int end = 3;
         int i = 0;
         int w;
         int spr;
-        
 
         Button[,] pola_button;
         List<Button> podswietlony = new List<Button>();
@@ -36,6 +36,16 @@ namespace Gra
             _form1 = form1;
             buttonDalej.Hide();
             panelGra.Enabled = false;
+            this.nazwa = nazwa;
+
+            TworzenieRankingu();
+            
+            DodawanieDoRankingu();
+            
+        }
+
+        void TworzenieRankingu()
+        {
 
             if (!File.Exists("wynik.txt"))
             {
@@ -53,7 +63,7 @@ namespace Gra
                 nicki.Add(data);
             }
 
-            foreach(string item in listBox1.Items)
+            foreach (string item in listBox1.Items)
             {
                 if (item.Contains(nazwa.Text) == true)
                 {
@@ -61,14 +71,17 @@ namespace Gra
                     this.Close();
                 }
             }
-            
+        }
 
-            //listBox1.DataSource = File.OpenWrite("C:/Users/barte/Desktop/es.txt");
+        void DodawanieDoRankingu()
+        {
             osoba = new Osoba(listBox1);
-            osoba.Nazwa(nazwa);
+            osoba.Nazwa(nazwa.Text);
+            osoba.Poziom_Trudnosci(_form1.poziom_trudnosci);
+            osoba.Wielkosc_Planszy(_form1.wielkosc);
+
             naz = nazwa.ToString();
             osoba.Dodaj();
-            
         }
 
         void GenerujButtony(Panel panelGry, Button[,] buttony, int rozmiar)
@@ -82,7 +95,8 @@ namespace Gra
                 {
 
                     buttony[i, j] = new Button();
-                    buttony[i, j].BackColor = Color.White;
+                    //buttony[i, j].BackColor = Color.White;
+                    buttony[i, j].BackColor = Properties.Settings.Default.FormBackground;
                     buttony[i, j].FlatStyle = FlatStyle.Flat;
                     buttony[i, j].FlatAppearance.BorderColor = Color.DarkGray;
                     buttony[i, j].FlatAppearance.BorderSize = 3;
@@ -123,12 +137,12 @@ namespace Gra
 
         }
 
-        public void wait(int milliseconds)
+        public void opoznienie(int milisekundy)
         {
-            if (milliseconds == 0 || milliseconds < 0) return;
+            if (milisekundy == 0 || milisekundy < 0) return;
 
             // Console.WriteLine("start wait timer");
-            timer1.Interval = milliseconds;
+            timer1.Interval = milisekundy;
             timer1.Enabled = true;
             timer1.Start();
 
@@ -136,7 +150,6 @@ namespace Gra
             {
                 timer1.Enabled = false;
                 timer1.Stop();
-                // Console.WriteLine("stop wait timer");
             };
 
             while (timer1.Enabled)
@@ -179,11 +192,11 @@ namespace Gra
 
                     foreach (var guzik in podswietlony)
                     {
-                        guzik.BackColor = Color.White;
-                        wait(800);
+                        guzik.BackColor = Properties.Settings.Default.FormBackground;
+                        opoznienie(800);
                         guzik.BackColor = Color.Yellow;
-                        wait(800);
-                        guzik.BackColor = Color.White;
+                        opoznienie(800);
+                        guzik.BackColor = Properties.Settings.Default.FormBackground;
                     }
                     panelGra.Enabled = true;
 
@@ -201,11 +214,11 @@ namespace Gra
 
                     foreach (var guzik in podswietlony)
                     {
-                        guzik.BackColor = Color.White;
-                        wait(500);
+                        guzik.BackColor = Properties.Settings.Default.FormBackground;
+                        opoznienie(500);
                         guzik.BackColor = Color.Yellow;
-                        wait(500);
-                        guzik.BackColor = Color.White;
+                        opoznienie(500);
+                        guzik.BackColor = Properties.Settings.Default.FormBackground;
                     }
                     panelGra.Enabled = true;
 
@@ -222,11 +235,11 @@ namespace Gra
 
                     foreach (var guzik in podswietlony)
                     {
-                        guzik.BackColor = Color.White;
-                        wait(200);
+                        guzik.BackColor = Properties.Settings.Default.FormBackground;
+                        opoznienie(200);
                         guzik.BackColor = Color.Yellow;
-                        wait(200);
-                        guzik.BackColor = Color.White;
+                        opoznienie(200);
+                        guzik.BackColor = Properties.Settings.Default.FormBackground;
                     }
                     panelGra.Enabled = true;
 
@@ -281,8 +294,8 @@ namespace Gra
                 if (wybrany[w] == podswietlony[w])
                 {
                     wybrany[w].BackColor = Color.Green;
-                    wait(100);
-                    wybrany[w].BackColor = Color.White;
+                    opoznienie(100);
+                    wybrany[w].BackColor = Properties.Settings.Default.FormBackground;
                 }
                 else
                 {

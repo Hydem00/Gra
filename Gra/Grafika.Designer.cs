@@ -32,35 +32,28 @@ namespace Gra
             this.button1 = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.button2 = new System.Windows.Forms.Button();
-            this.panelNaglowek = new System.Windows.Forms.Panel();
+            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(432, 239);
+            this.button1.Location = new System.Drawing.Point(402, 214);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(134, 25);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Zmień kolor";
+            this.button1.Text = "Zmień kolor planszy";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(432, 300);
+            this.button2.Location = new System.Drawing.Point(402, 255);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(134, 25);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Zatwierdz";
+            this.button2.Text = "Zmień kolor tła";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // panelNaglowek
-            // 
-            this.panelNaglowek.Location = new System.Drawing.Point(274, 95);
-            this.panelNaglowek.Name = "panelNaglowek";
-            this.panelNaglowek.Size = new System.Drawing.Size(200, 100);
-            this.panelNaglowek.TabIndex = 2;
             // 
             // Grafika
             // 
@@ -68,13 +61,11 @@ namespace Gra
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(922, 506);
-            this.Controls.Add(this.panelNaglowek);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Grafika";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grafika";
-            this.Load += new System.EventHandler(this.Grafika_Load);
             this.ResumeLayout(false);
 
         }
@@ -84,6 +75,6 @@ namespace Gra
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panelNaglowek;
+        private System.Windows.Forms.ColorDialog colorDialog2;
     }
 }

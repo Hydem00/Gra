@@ -154,17 +154,6 @@ namespace Gra
             Application.Exit();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            this.BackColor = Properties.Settings.Default.FormBackground;
-            panelNaglowek.BackColor = Properties.Settings.Default.PanelColor;
-            OpcjeButton.BackColor = Properties.Settings.Default.PanelColor;
-            StartButton.BackColor = Properties.Settings.Default.PanelColor;
-            ExitButton.BackColor = Properties.Settings.Default.PanelColor;
-            panelStopka.BackColor = Properties.Settings.Default.PanelColor;
-            Menu.BackColor = Properties.Settings.Default.PanelColor;
-        }
-
         private void RadioLatwy_CheckedChanged(object sender, EventArgs e)
         {
             poziom_trudnosci = RadioLatwy.Text;
