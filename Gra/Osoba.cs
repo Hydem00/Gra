@@ -13,6 +13,7 @@ namespace Gra
         ListBox lista;
         int punkty;
         bool ok;
+        string temp;
 
         public Osoba(ListBox lista)
         {
@@ -35,37 +36,42 @@ namespace Gra
                 MessageBox.Show("Podaj dane", "Błąd");
             }
             else
-                lista.Items.Add(nazwa.Text + " " + punkty);
+            {
+                lista.Items.Insert(0, nazwa.Text + " " + punkty);
+            }
         }
 
         public void Edycja()
         {
-            if (!ok)
-            {
-                string[] tekst;
-                ok = true;
-                lista.SelectedIndex = lista.Items.Count -1;
-                if (lista.SelectedIndex == 0)
-                {
-                    MessageBox.Show("Błąd nie wybrano elementu", "Błąd");
-                }
-                else
-                {
-                    tekst = lista.SelectedItem.ToString().Split();
-                    nazwa.Text = tekst[0];
-                    punkty = int.Parse(tekst[1]);
-                }
+            //if (!ok)
+            //{
 
-            }
-            else
-            {
-                var pozycja = 0;
-                lista.Items.RemoveAt(0);
-                string tekst2 = (nazwa.Text + " " + punkty);
+            //    string[] tekst;
+            //    ok = true;
+            //    lista.SelectedIndex = 0;
+            //        tekst = lista.SelectedItem.ToString().Split();
+            //        temp = tekst[0].ToString();
+            //        punkty = int.Parse(tekst[1]);
+
+
+            //}
+            //else
+            //{
+            //    var pozycja = 0;
+            //    lista.Items.RemoveAt(0);
+            //    string tekst2 = (temp + " " + punkty);
+            //    lista.Items.Insert(pozycja, tekst2);
+            //    temp.Clear();
+            //    ok = false;
+            //}
+
+            var pozycja = 0;
+            temp = nazwa.Text;
+            lista.Items.RemoveAt(0);
+                string tekst2 = (temp + " " + punkty);
                 lista.Items.Insert(pozycja, tekst2);
-                nazwa.Clear();
-                ok = false;
-            }
+                //temp.Clear();
+                //ok = false;
         }
 
         public void Usun(int Indeks)

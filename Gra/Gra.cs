@@ -22,11 +22,13 @@ namespace Gra
         int i = 0;
         int w;
         int spr;
+        
 
         Button[,] pola_button;
         List<Button> podswietlony = new List<Button>();
         List<Button> wybrany = new List<Button>();
         ListBox dane = new ListBox();
+        List<string> nicki = new List<string>();
 
         public Gra(Form1 form1, TextBox nazwa)
         {
@@ -48,7 +50,18 @@ namespace Gra
             {
                 dane.Items.Add(data);
                 listBox1.Items.Add(data);
+                nicki.Add(data);
             }
+
+            foreach(string item in listBox1.Items)
+            {
+                if (item.Contains(nazwa.Text) == true)
+                {
+                    //istnieje = true;
+                    this.Close();
+                }
+            }
+            
 
             //listBox1.DataSource = File.OpenWrite("C:/Users/barte/Desktop/es.txt");
             osoba = new Osoba(listBox1);
@@ -148,6 +161,10 @@ namespace Gra
 
         private void buttonDalej_Click(object sender, EventArgs e)
         {
+            buttonDalej.Visible = false;
+            listBox1.Enabled = false;
+
+
             switch (_form1.poziom_trudnosci)
             {
                 case "łatwy":       
@@ -216,23 +233,6 @@ namespace Gra
                     break;
 
             }
-            //w = -1;
-            //spr = 1;
-            //wybrany.Clear();
-
-            //buttonDalej.Enabled = false;
-            //panelGra.Enabled = false;
-            //LosoweGuziki();
-
-            //foreach (var guzik in podswietlony)
-            //{
-            //    guzik.BackColor = Color.White;
-            //    wait(800);
-            //    guzik.BackColor = Color.Yellow;
-            //    wait(800);
-            //    guzik.BackColor = Color.White;
-            //}
-            //panelGra.Enabled = true;
 
         }
 
@@ -289,17 +289,6 @@ namespace Gra
                     wybrany[w].BackColor = Color.Red;
                     MessageBox.Show("GAME OVER", "Źle");
 
-                    //TextWriter tw = new StreamWriter("temp.txt");
-
-                    //foreach (String s in listBox1.Items)
-                    //{
-                    //    tw.WriteLine(s);
-                    //}
-
-                    //tw.Close();
-
-                    //File.Replace("temp.txt", "wynik.txt", "a.txt");
-
                     spr = 1;
                     this.Close();
                 }
@@ -314,32 +303,33 @@ namespace Gra
 
             if (spr == end)
             {
+                listBox1.Enabled = true;
                 buttonDalej.Enabled = true;
                 panelGra.Enabled = false;
+                buttonDalej.Visible = true;
                 MessageBox.Show("Dobrze, możesz przejść dalej", "Dobrze");
                 switch (_form1.poziom_trudnosci)
                 {
                     case "łatwy":
-                        punkty++;
+                        punkty = (punkty + 3 + (int)_form1.wielkosc);
                         osoba.Punktacja(punkty);
                         osoba.Edycja();
                         end++;
                         break;
 
                     case "średni":
-                        punkty = punkty + 3;
+                        punkty = (punkty + 5 + (int)_form1.wielkosc) * 2;
                         osoba.Punktacja(punkty);
                         osoba.Edycja();
                         end = end + 2;
                         break;
 
                     case "trudny":
-                        punkty = punkty + 10;
+                        punkty = (punkty + 6 + (int)_form1.wielkosc) * 3;
                         osoba.Punktacja(punkty);
                         osoba.Edycja();
                         end = end + 3;
-                        break;
-                        
+                        break;  
                 }
                 
             }
