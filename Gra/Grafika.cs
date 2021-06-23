@@ -14,7 +14,7 @@ namespace Gra
     {
         public Grafika()
         {
-            InitializeComponent();
+            InitializeComponent();          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -23,9 +23,9 @@ namespace Gra
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
                 
-                Properties.Settings.Default.FormBackground = colorDialog1.Color;
-                Properties.Settings.Default.PanelColor = colorDialog1.Color;
+                Properties.Settings.Default.ButtonBackground = colorDialog1.Color;
                 Properties.Settings.Default.Save();
+                button3.BackColor = Properties.Settings.Default.ButtonBackground;
                 //this.BackColor = colorDialog1.Color;
                 //panelNaglowek.BackColor = colorDialog1.Color;
             }
@@ -33,16 +33,15 @@ namespace Gra
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //ColorDialog colorDialog1 = new ColorDialog();
-            //if (colorDialog1.ShowDialog() == DialogResult.OK)
-            //{
-
-            //    Properties.Settings.Default.FormBackground = colorDialog1.Color;
-            //    Properties.Settings.Default.PanelColor = colorDialog1.Color;
-            //    Properties.Settings.Default.Save();
-            //    //this.BackColor = colorDialog1.Color;
-            //    //panelNaglowek.BackColor = colorDialog1.Color;
-            //}
+            ColorDialog colorDialog1 = new ColorDialog();
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Properties.Settings.Default.MenuBackground = colorDialog1.Color;
+                Properties.Settings.Default.Save();
+                this.BackColor = Properties.Settings.Default.MenuBackground;
+                //this.BackColor = colorDialog1.Color;
+                //panelNaglowek.BackColor = colorDialog1.Color;
+            }
         }
     }
 }

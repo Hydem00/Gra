@@ -25,23 +25,23 @@ namespace Gra.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Drawing.Color FormBackground {
+        public global::System.Drawing.Color ButtonBackground {
             get {
-                return ((global::System.Drawing.Color)(this["FormBackground"]));
+                return ((global::System.Drawing.Color)(this["ButtonBackground"]));
             }
             set {
-                this["FormBackground"] = value;
+                this["ButtonBackground"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Drawing.Color PanelColor {
+        public global::System.Drawing.Color MenuBackground {
             get {
-                return ((global::System.Drawing.Color)(this["PanelColor"]));
+                return ((global::System.Drawing.Color)(this["MenuBackground"]));
             }
             set {
-                this["PanelColor"] = value;
+                this["MenuBackground"] = value;
             }
         }
     }
