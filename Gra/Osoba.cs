@@ -49,7 +49,7 @@ namespace Gra
             }
             else
             {
-                lista.Items.Insert(0, nazwa + "     " + punkty + "     " + wielkosc_planszy+"x"+wielkosc_planszy + "     " + poziom_trudnosci);
+                lista.Items.Insert(0, nazwa + "\t" + punkty + "\t" + wielkosc_planszy+"x"+wielkosc_planszy + "\t" + poziom_trudnosci);
             }
         }
 
@@ -58,7 +58,7 @@ namespace Gra
             var pozycja = 0;
             temp = nazwa;
             lista.Items.RemoveAt(0);
-                string tekst2 = (temp + "     " + punkty + "     " + wielkosc_planszy + "x" + wielkosc_planszy + "     " + poziom_trudnosci);
+                string tekst2 = (temp + "\t" + punkty + "\t" + wielkosc_planszy + "x" + wielkosc_planszy + "\t" + poziom_trudnosci);
                 lista.Items.Insert(pozycja, tekst2);
         }
 
