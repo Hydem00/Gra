@@ -127,7 +127,7 @@
     <value>Projekt prostej gry Memory polegającej na naśladowaniu sekwencji ruchu wskazanej przez komputer. 
 
 Gra Start
-By rozpocząć grę musisz wcisnąć w menu przycisk START i podać tam unikalną nazwę użytkownika, która nie była nigdy wcześniej wybierania.
+By rozpocząć grę musisz wcisnąć w menu przycisk START i podać tam unikalną nazwę użytkownika (max. 8 znaków), która nie była nigdy wcześniej wybierania.
 
 W menu gry po wciśnięciu guzika Start możesz wybrać poziom trudności i wielkość planszy.
 Poziom łatwy: Po każdej sekwencji ruchu wskazanej przez komputer do sekwencji dodawany jest jeden ruch więcej.
@@ -135,7 +135,7 @@ Poziom średni: Po każdej sekwencji ruchu wskazanej przez komputer do sekwencji
 Poziom trudny: Po każdej sekwencji ruchu wskazanej przez komputer do sekwencji dodawane są trzy ruchy więcej.
 
 Po wybraniu przez Ciebie opcji gry wcisnij przycisk Zatwierdź który przeniesie Cię do gry.
-By rozpocząć grę wciśnij przycisk Rozpocznij, komputer wtedy zacznie pokazywać Ci losową sekwencję ruchu, a twoim zadaniem będzie naśladować
+By rozpocząć grę wciśnij przycisk Rozpocznij, pojawi się wtedy plansza a komputer zacznie pokazywać Ci losową sekwencję ruchu, twoim zadaniem będzie naśladować
 jego ruchy. Po dobrze wykonanej sekwencji ruchu pojawi się komunikat, że została ona bezbłednie wykonana. By grać dalej wciśnij przycisk Dalej.
 Jednak kiedy się pomylisz wyświetli się napis GameOver, który zakończy grę i przeniesie Cię do menu.
 
