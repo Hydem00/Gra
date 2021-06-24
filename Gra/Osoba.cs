@@ -55,35 +55,11 @@ namespace Gra
 
         public void Edycja()
         {
-            //if (!ok)
-            //{
-
-            //    string[] tekst;
-            //    ok = true;
-            //    lista.SelectedIndex = 0;
-            //        tekst = lista.SelectedItem.ToString().Split();
-            //        temp = tekst[0].ToString();
-            //        punkty = int.Parse(tekst[1]);
-
-
-            //}
-            //else
-            //{
-            //    var pozycja = 0;
-            //    lista.Items.RemoveAt(0);
-            //    string tekst2 = (temp + " " + punkty);
-            //    lista.Items.Insert(pozycja, tekst2);
-            //    temp.Clear();
-            //    ok = false;
-            //}
-
             var pozycja = 0;
             temp = nazwa;
             lista.Items.RemoveAt(0);
                 string tekst2 = (temp + "\t" + punkty + "\t" + wielkosc_planszy + "x" + wielkosc_planszy + "\t" + poziom_trudnosci);
                 lista.Items.Insert(pozycja, tekst2);
-                //temp.Clear();
-                //ok = false;
         }
 
         public void Usun(int Indeks)

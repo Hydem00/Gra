@@ -32,6 +32,7 @@ namespace Gra
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Menu = new System.Windows.Forms.Panel();
             this.panelStopka = new System.Windows.Forms.Panel();
+            this.Autorzy = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.OpcjePanel = new System.Windows.Forms.Panel();
             this.InstrukcjaButton = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@ namespace Gra
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.serviceController1 = new System.ServiceProcess.ServiceController();
             this.Menu.SuspendLayout();
+            this.panelStopka.SuspendLayout();
             this.OpcjePanel.SuspendLayout();
             this.StartPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WielkoscPlanszy)).BeginInit();
@@ -75,8 +77,15 @@ namespace Gra
             // 
             // panelStopka
             // 
+            this.panelStopka.Controls.Add(this.Autorzy);
             resources.ApplyResources(this.panelStopka, "panelStopka");
             this.panelStopka.Name = "panelStopka";
+            // 
+            // Autorzy
+            // 
+            resources.ApplyResources(this.Autorzy, "Autorzy");
+            this.Autorzy.ForeColor = System.Drawing.SystemColors.Control;
+            this.Autorzy.Name = "Autorzy";
             // 
             // ExitButton
             // 
@@ -226,6 +235,8 @@ namespace Gra
             this.Controls.Add(this.Menu);
             this.Name = "Form1";
             this.Menu.ResumeLayout(false);
+            this.panelStopka.ResumeLayout(false);
+            this.panelStopka.PerformLayout();
             this.OpcjePanel.ResumeLayout(false);
             this.StartPanel.ResumeLayout(false);
             this.StartPanel.PerformLayout();
@@ -262,6 +273,7 @@ namespace Gra
         private System.Windows.Forms.RadioButton RadioTrudny;
         private System.Windows.Forms.RadioButton RadioSredni;
         private System.Windows.Forms.RadioButton RadioLatwy;
+        private System.Windows.Forms.Label Autorzy;
     }
 }
 

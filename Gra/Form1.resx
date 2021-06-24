@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;Autorzy.Name" xml:space="preserve">
+    <value>Autorzy</value>
+  </data>
+  <data name="&gt;&gt;Autorzy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Autorzy.Parent" xml:space="preserve">
+    <value>panelStopka</value>
+  </data>
+  <data name="&gt;&gt;Autorzy.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panelStopka.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -359,6 +371,9 @@
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>695, 38</value>
+  </data>
+  <data name="textBox1.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 20</value>
@@ -648,6 +663,33 @@
   <data name="&gt;&gt;Menu.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="Autorzy.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Autorzy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 29</value>
+  </data>
+  <data name="Autorzy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 13</value>
+  </data>
+  <data name="Autorzy.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Autorzy.Text" xml:space="preserve">
+    <value>Autorzy: Bartosz Kalbarczyk, Igor Tatara 205IC A2</value>
+  </data>
+  <data name="&gt;&gt;Autorzy.Name" xml:space="preserve">
+    <value>Autorzy</value>
+  </data>
+  <data name="&gt;&gt;Autorzy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Autorzy.Parent" xml:space="preserve">
+    <value>panelStopka</value>
+  </data>
+  <data name="&gt;&gt;Autorzy.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="InstrukcjaButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -790,6 +832,9 @@
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>48</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>

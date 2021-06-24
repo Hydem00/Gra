@@ -152,7 +152,6 @@ namespace Gra
         {
             if (milisekundy == 0 || milisekundy < 0) return;
 
-            // Console.WriteLine("start wait timer");
             timer1.Interval = milisekundy;
             timer1.Enabled = true;
             timer1.Start();

@@ -15,6 +15,9 @@ namespace Gra
         public Instrukcja()
         {
             InitializeComponent();
+            textBox1.SelectionStart = 0;
+            textBox1.SelectionLength = 0;
+            textBox1.Select();
         }
     }
 }
