@@ -29,6 +29,8 @@ namespace Gra
 
             UstawieniaPlanszy();
 
+            textBox1.MaxLength = 8;
+
         }
 
         void UstawienieRadio()

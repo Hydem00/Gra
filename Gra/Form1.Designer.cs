@@ -32,6 +32,7 @@ namespace Gra
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Menu = new System.Windows.Forms.Panel();
             this.panelStopka = new System.Windows.Forms.Panel();
+            this.Autorzy = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.OpcjePanel = new System.Windows.Forms.Panel();
             this.InstrukcjaButton = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@ namespace Gra
             this.panelNaglowek = new System.Windows.Forms.Panel();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.serviceController1 = new System.ServiceProcess.ServiceController();
-            this.Autorzy = new System.Windows.Forms.Label();
             this.Menu.SuspendLayout();
             this.panelStopka.SuspendLayout();
             this.OpcjePanel.SuspendLayout();
@@ -80,6 +80,12 @@ namespace Gra
             this.panelStopka.Controls.Add(this.Autorzy);
             resources.ApplyResources(this.panelStopka, "panelStopka");
             this.panelStopka.Name = "panelStopka";
+            // 
+            // Autorzy
+            // 
+            resources.ApplyResources(this.Autorzy, "Autorzy");
+            this.Autorzy.ForeColor = System.Drawing.SystemColors.Control;
+            this.Autorzy.Name = "Autorzy";
             // 
             // ExitButton
             // 
@@ -221,12 +227,6 @@ namespace Gra
             resources.ApplyResources(this.axWindowsMediaPlayer1, "axWindowsMediaPlayer1");
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            // 
-            // Autorzy
-            // 
-            resources.ApplyResources(this.Autorzy, "Autorzy");
-            this.Autorzy.ForeColor = System.Drawing.SystemColors.Control;
-            this.Autorzy.Name = "Autorzy";
             // 
             // Form1
             // 
