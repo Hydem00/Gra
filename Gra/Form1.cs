@@ -15,16 +15,36 @@ namespace Gra
     {
         public int wielkosc;
         public string poziom_trudnosci;
+        string path = Path.GetFullPath(@"..\..\Resources\Simple - Patrick Patrikios (online-audio-converter.com).wav");
 
         public Form1()
         {
             InitializeComponent();
+
             WidocznoscPaneli();
 
-            string path = Path.GetFullPath(@"..\..\Resources\Simple - Patrick Patrikios (online-audio-converter.com).wav");
+            UstawienieRadio();
 
+            UstawieniaAudio();
+
+            UstawieniaPlanszy();
+
+        }
+
+        void UstawienieRadio()
+        {
             RadioLatwy.Checked = true;
+        }
 
+        void UstawieniaPlanszy()
+        {
+            WielkoscPlanszy.Minimum = 2;
+            WielkoscPlanszy.Value = 2;
+            WielkoscPlanszy.Maximum = 10;
+        }
+
+        void UstawieniaAudio()
+        {
             MediaPlayer.URL = path;
 
             MediaPlayer.settings.setMode("loop", true);
@@ -34,11 +54,6 @@ namespace Gra
             MediaPlayer.settings.volume = 10;
 
             axWindowsMediaPlayer1.Hide();
-
-            WielkoscPlanszy.Minimum = 2;
-            WielkoscPlanszy.Value = 2;
-            WielkoscPlanszy.Maximum = 10;
-
         }
 
         public void Audio()
@@ -152,17 +167,6 @@ namespace Gra
         {
             Audio();
             Application.Exit();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            this.BackColor = Properties.Settings.Default.FormBackground;
-            panelNaglowek.BackColor = Properties.Settings.Default.PanelColor;
-            OpcjeButton.BackColor = Properties.Settings.Default.PanelColor;
-            StartButton.BackColor = Properties.Settings.Default.PanelColor;
-            ExitButton.BackColor = Properties.Settings.Default.PanelColor;
-            panelStopka.BackColor = Properties.Settings.Default.PanelColor;
-            Menu.BackColor = Properties.Settings.Default.PanelColor;
         }
 
         private void RadioLatwy_CheckedChanged(object sender, EventArgs e)

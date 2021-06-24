@@ -2,10 +2,10 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Gra.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="FormBackground" Type="System.Drawing.Color" Scope="User">
+    <Setting Name="ButtonBackground" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="PanelColor" Type="System.Drawing.Color" Scope="User">
+    <Setting Name="MenuBackground" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

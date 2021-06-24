@@ -16,13 +16,13 @@ namespace Gra
         private Form1 _form1;
         public int punkty = 0;
         public string naz;
+        TextBox nazwa;
         Osoba osoba;
-        int x, y;
-        int end = 3;
-        int i = 0;
-        int w;
-        int spr;
-        
+        int wiersz, kolumna;
+        int liczba_ruchow = 3;
+        int wylosowane_buttony = 0;
+        int klikniety_button;
+        int wykonane_ruchy;
 
         Button[,] pola_button;
         List<Button> podswietlony = new List<Button>();
@@ -36,6 +36,26 @@ namespace Gra
             _form1 = form1;
             buttonDalej.Hide();
             panelGra.Enabled = false;
+
+            this.nazwa = nazwa;
+
+            KolorTla();
+
+            label1.Visible = false;
+
+            TworzenieRankingu();
+            
+            DodawanieDoRankingu();
+            
+        }
+
+        void KolorTla()
+        {
+            this.BackColor = Properties.Settings.Default.MenuBackground;
+        }
+
+        void TworzenieRankingu()
+        {
 
             if (!File.Exists("wynik.txt"))
             {
@@ -53,7 +73,7 @@ namespace Gra
                 nicki.Add(data);
             }
 
-            foreach(string item in listBox1.Items)
+            foreach (string item in listBox1.Items)
             {
                 if (item.Contains(nazwa.Text) == true)
                 {
@@ -61,14 +81,17 @@ namespace Gra
                     this.Close();
                 }
             }
-            
+        }
 
-            //listBox1.DataSource = File.OpenWrite("C:/Users/barte/Desktop/es.txt");
+        void DodawanieDoRankingu()
+        {
             osoba = new Osoba(listBox1);
-            osoba.Nazwa(nazwa);
+            osoba.Nazwa(nazwa.Text);
+            osoba.Poziom_Trudnosci(_form1.poziom_trudnosci);
+            osoba.Wielkosc_Planszy(_form1.wielkosc);
+
             naz = nazwa.ToString();
             osoba.Dodaj();
-            
         }
 
         void GenerujButtony(Panel panelGry, Button[,] buttony, int rozmiar)
@@ -82,7 +105,8 @@ namespace Gra
                 {
 
                     buttony[i, j] = new Button();
-                    buttony[i, j].BackColor = Color.White;
+                    //buttony[i, j].BackColor = Color.White;
+                    buttony[i, j].BackColor = Properties.Settings.Default.ButtonBackground;
                     buttony[i, j].FlatStyle = FlatStyle.Flat;
                     buttony[i, j].FlatAppearance.BorderColor = Color.DarkGray;
                     buttony[i, j].FlatAppearance.BorderSize = 3;
@@ -99,15 +123,16 @@ namespace Gra
 
         void button_click(object sender, EventArgs e)
         {
-            x = ((Button)sender).TabIndex / (int)_form1.wielkosc + 1;
-            y = ((Button)sender).TabIndex % (int)_form1.wielkosc + 1;
-            label1.Text = string.Format("x={0} y={1}", x, y);
+            wiersz = ((Button)sender).TabIndex / (int)_form1.wielkosc + 1;
+            kolumna = ((Button)sender).TabIndex % (int)_form1.wielkosc + 1;
+            label1.Text = string.Format("x={0} y={1}", wiersz, kolumna);
+            
 
-            w++;
+            klikniety_button++;
 
-            wybrany.Add(pola_button[x - 1, y - 1]);
+            wybrany.Add(pola_button[wiersz - 1, kolumna - 1]);
 
-            SprawdzWynik(w);
+            SprawdzWynik(klikniety_button);
 
         }
 
@@ -123,12 +148,12 @@ namespace Gra
 
         }
 
-        public void wait(int milliseconds)
+        public void opoznienie(int milisekundy)
         {
-            if (milliseconds == 0 || milliseconds < 0) return;
+            if (milisekundy == 0 || milisekundy < 0) return;
 
             // Console.WriteLine("start wait timer");
-            timer1.Interval = milliseconds;
+            timer1.Interval = milisekundy;
             timer1.Enabled = true;
             timer1.Start();
 
@@ -136,7 +161,6 @@ namespace Gra
             {
                 timer1.Enabled = false;
                 timer1.Stop();
-                // Console.WriteLine("stop wait timer");
             };
 
             while (timer1.Enabled)
@@ -150,13 +174,12 @@ namespace Gra
             Random rnd = new Random();
             do
             {
-                i++;
+                wylosowane_buttony++;
 
                 podswietlony.Add(pola_button[rnd.Next(_form1.wielkosc), rnd.Next(_form1.wielkosc)]);
 
-            } while (i != end);
+            } while (wylosowane_buttony != liczba_ruchow);
 
-            //end++;
         }
 
         private void buttonDalej_Click(object sender, EventArgs e)
@@ -168,8 +191,8 @@ namespace Gra
             switch (_form1.poziom_trudnosci)
             {
                 case "łatwy":       
-                    w = -1;
-                    spr = 0;
+                    klikniety_button = -1;
+                    wykonane_ruchy = 0;
                     wybrany.Clear();
 
                     buttonDalej.Enabled = false;
@@ -179,19 +202,19 @@ namespace Gra
 
                     foreach (var guzik in podswietlony)
                     {
-                        guzik.BackColor = Color.White;
-                        wait(800);
+                        guzik.BackColor = Properties.Settings.Default.ButtonBackground;
+                        opoznienie(800);
                         guzik.BackColor = Color.Yellow;
-                        wait(800);
-                        guzik.BackColor = Color.White;
+                        opoznienie(800);
+                        guzik.BackColor = Properties.Settings.Default.ButtonBackground;
                     }
                     panelGra.Enabled = true;
 
                     break;
 
                 case "średni":
-                    w = -1;
-                    spr = 0;
+                    klikniety_button = -1;
+                    wykonane_ruchy = 0;
                     wybrany.Clear();
 
                     buttonDalej.Enabled = false;
@@ -201,19 +224,19 @@ namespace Gra
 
                     foreach (var guzik in podswietlony)
                     {
-                        guzik.BackColor = Color.White;
-                        wait(500);
+                        guzik.BackColor = Properties.Settings.Default.ButtonBackground;
+                        opoznienie(500);
                         guzik.BackColor = Color.Yellow;
-                        wait(500);
-                        guzik.BackColor = Color.White;
+                        opoznienie(500);
+                        guzik.BackColor = Properties.Settings.Default.ButtonBackground;
                     }
                     panelGra.Enabled = true;
 
                     break;
 
                 case "trudny":
-                    w = -1;
-                    spr = 0;
+                    klikniety_button = -1;
+                    wykonane_ruchy = 0;
                     wybrany.Clear();
 
                     buttonDalej.Enabled = false;
@@ -222,11 +245,11 @@ namespace Gra
 
                     foreach (var guzik in podswietlony)
                     {
-                        guzik.BackColor = Color.White;
-                        wait(200);
+                        guzik.BackColor = Properties.Settings.Default.ButtonBackground;
+                        opoznienie(200);
                         guzik.BackColor = Color.Yellow;
-                        wait(200);
-                        guzik.BackColor = Color.White;
+                        opoznienie(200);
+                        guzik.BackColor = Properties.Settings.Default.ButtonBackground;
                     }
                     panelGra.Enabled = true;
 
@@ -275,21 +298,21 @@ namespace Gra
 
         private void SprawdzWynik(int w)
         {
-            spr++;
+            wykonane_ruchy++;
             try
             {
                 if (wybrany[w] == podswietlony[w])
                 {
                     wybrany[w].BackColor = Color.Green;
-                    wait(100);
-                    wybrany[w].BackColor = Color.White;
+                    opoznienie(100);
+                    wybrany[w].BackColor = Properties.Settings.Default.ButtonBackground;
                 }
                 else
                 {
                     wybrany[w].BackColor = Color.Red;
                     MessageBox.Show("GAME OVER", "Źle");
 
-                    spr = 1;
+                    wykonane_ruchy = 1;
                     this.Close();
                 }
             }
@@ -297,11 +320,11 @@ namespace Gra
             {
                 wybrany[w].BackColor = Color.Red;
                 MessageBox.Show("GAME OVER", "Źle");
-                spr = 1;
+                wykonane_ruchy = 1;
                 this.Close();
             }
 
-            if (spr == end)
+            if (wykonane_ruchy == liczba_ruchow)
             {
                 listBox1.Enabled = true;
                 buttonDalej.Enabled = true;
@@ -314,21 +337,21 @@ namespace Gra
                         punkty = (punkty + 3 + (int)_form1.wielkosc);
                         osoba.Punktacja(punkty);
                         osoba.Edycja();
-                        end++;
+                        liczba_ruchow++;
                         break;
 
                     case "średni":
                         punkty = (punkty + 5 + (int)_form1.wielkosc) * 2;
                         osoba.Punktacja(punkty);
                         osoba.Edycja();
-                        end = end + 2;
+                        liczba_ruchow = liczba_ruchow + 2;
                         break;
 
                     case "trudny":
                         punkty = (punkty + 6 + (int)_form1.wielkosc) * 3;
                         osoba.Punktacja(punkty);
                         osoba.Edycja();
-                        end = end + 3;
+                        liczba_ruchow = liczba_ruchow + 3;
                         break;  
                 }
                 

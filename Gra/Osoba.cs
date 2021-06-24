@@ -9,10 +9,11 @@ namespace Gra
 {
     class Osoba
     {
-        TextBox nazwa;
+        string nazwa;
         ListBox lista;
         int punkty;
-        bool ok;
+        int wielkosc_planszy;
+        string poziom_trudnosci;
         string temp;
 
         public Osoba(ListBox lista)
@@ -20,10 +21,21 @@ namespace Gra
             this.lista = lista;
         }
 
-        public void Nazwa(TextBox nazwa)
+        public void Nazwa(string nazwa)
         {
             this.nazwa = nazwa;
         }
+
+        public void Poziom_Trudnosci(string poziom_trudnosci)
+        {
+            this.poziom_trudnosci = poziom_trudnosci;
+        }
+
+        public void Wielkosc_Planszy(int wielkosc_planszy)
+        {
+            this.wielkosc_planszy = wielkosc_planszy;
+        }
+
         public void Punktacja(int pkt)
         {
             punkty = pkt;
@@ -31,13 +43,13 @@ namespace Gra
 
         public void Dodaj()
         {
-            if (nazwa.Text == "" && punkty == ' ')
+            if (nazwa == "" && punkty == ' ')
             {
                 MessageBox.Show("Podaj dane", "Błąd");
             }
             else
             {
-                lista.Items.Insert(0, nazwa.Text + " " + punkty);
+                lista.Items.Insert(0, nazwa + "\t" + punkty + "\t" + wielkosc_planszy+"x"+wielkosc_planszy + "\t" + poziom_trudnosci);
             }
         }
 
@@ -66,9 +78,9 @@ namespace Gra
             //}
 
             var pozycja = 0;
-            temp = nazwa.Text;
+            temp = nazwa;
             lista.Items.RemoveAt(0);
-                string tekst2 = (temp + " " + punkty);
+                string tekst2 = (temp + "\t" + punkty + "\t" + wielkosc_planszy + "x" + wielkosc_planszy + "\t" + poziom_trudnosci);
                 lista.Items.Insert(pozycja, tekst2);
                 //temp.Clear();
                 //ok = false;

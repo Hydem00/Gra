@@ -51,7 +51,7 @@ namespace Gra
             // 
             // buttonRozpocznij
             // 
-            this.buttonRozpocznij.Location = new System.Drawing.Point(427, 224);
+            this.buttonRozpocznij.Location = new System.Drawing.Point(587, 193);
             this.buttonRozpocznij.Name = "buttonRozpocznij";
             this.buttonRozpocznij.Size = new System.Drawing.Size(75, 23);
             this.buttonRozpocznij.TabIndex = 1;
@@ -71,7 +71,7 @@ namespace Gra
             // 
             // buttonDalej
             // 
-            this.buttonDalej.Location = new System.Drawing.Point(427, 224);
+            this.buttonDalej.Location = new System.Drawing.Point(587, 193);
             this.buttonDalej.Name = "buttonDalej";
             this.buttonDalej.Size = new System.Drawing.Size(75, 23);
             this.buttonDalej.TabIndex = 3;
@@ -120,6 +120,7 @@ namespace Gra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(922, 506);
             this.Controls.Add(this.Usun);
@@ -133,6 +134,7 @@ namespace Gra
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gra";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Gra_FormClosed);
+            //this.Load += new System.EventHandler(this.Gra_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
