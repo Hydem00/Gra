@@ -134,7 +134,6 @@ namespace Gra
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gra";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Gra_FormClosed);
-            //this.Load += new System.EventHandler(this.Gra_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
