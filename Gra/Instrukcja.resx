@@ -117,4 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="printDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="textBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Projekt prostej gry Memory polegającej na naśladowaniu sekwencji ruchu wskazanej przez komputer. 
+
+Gra Start
+By rozpocząć grę musisz wcisnąć w menu przycisk START i podać tam unikalną nazwę użytkownika, która nie była nigdy wcześniej wybierania.
+
+W menu gry po wciśnięciu guzika Start możesz wybrać poziom trudności i wielkość planszy.
+Poziom łatwy: Po każdej sekwencji ruchu wskazanej przez komputer do sekwencji dodawany jest jeden ruch więcej.
+Poziom średni: Po każdej sekwencji ruchu wskazanej przez komputer do sekwencji dodawane są dwa ruchy więcej.
+Poziom trudny: Po każdej sekwencji ruchu wskazanej przez komputer do sekwencji dodawane są trzy ruchy więcej.
+
+Po wybraniu przez Ciebie opcji gry wcisnij przycisk Zatwierdź który przeniesie Cię do gry.
+By rozpocząć grę wciśnij przycisk Rozpocznij, komputer wtedy zacznie pokazywać Ci losową sekwencję ruchu, a twoim zadaniem będzie naśladować
+jego ruchy. Po dobrze wykonanej sekwencji ruchu pojawi się komunikat, że została ona bezbłednie wykonana. By grać dalej wciśnij przycisk Dalej.
+Jednak kiedy się pomylisz wyświetli się napis GameOver, który zakończy grę i przeniesie Cię do menu.
+
+W trakcie gry za każdą poprawnie wykonaną sekwencje ruchu, wskazaną przez komputer przy twojej nazwie w rankingu
+będą zliczać się punkty. Pojawi się tam również wielkość planszy i poziom trudności. (Co więcej z rankingu możesz usuwać niepotrzebnych użytkowników)
+
+Punktacja jest zależna od poziomu trudności i wielkości planszy.
+
+Poziom łatwy: 3 punkty + punkty za wielkość planszy (np. plansza 3x3 to 3 punkty, 4x4 to 4 punkty itd.)
+Poziom średni: (5 punktów + punkty za wielkość planszy) * 2
+Poziom trudny: (6 punktów + punkty za wielkość planszy) * 3
+
+Co ważne: Punkty przyznawane są po wykonaniu bezbłednej sekwencji ruchu, wskazanej przez komputer.
+Punkty sumują się co każdą poprawnie wykonaną sekwencje ruchów.
+
+Dźwięk i Muzyka
+W menu gry w opcjach jest możliwość ustawienia głośności muzyki lub całkowitego jej wyciszenia.
+
+Grafika
+W menu gry w opcjach jest możliwość wybrania koloru planszy i tła, które ujrzymy po rozpoczęciu gry.
+</value>
+  </data>
 </root>

@@ -52,7 +52,9 @@ namespace Gra
             this.panelNaglowek = new System.Windows.Forms.Panel();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.serviceController1 = new System.ServiceProcess.ServiceController();
+            this.Autorzy = new System.Windows.Forms.Label();
             this.Menu.SuspendLayout();
+            this.panelStopka.SuspendLayout();
             this.OpcjePanel.SuspendLayout();
             this.StartPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WielkoscPlanszy)).BeginInit();
@@ -75,6 +77,7 @@ namespace Gra
             // 
             // panelStopka
             // 
+            this.panelStopka.Controls.Add(this.Autorzy);
             resources.ApplyResources(this.panelStopka, "panelStopka");
             this.panelStopka.Name = "panelStopka";
             // 
@@ -219,6 +222,12 @@ namespace Gra
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             // 
+            // Autorzy
+            // 
+            resources.ApplyResources(this.Autorzy, "Autorzy");
+            this.Autorzy.ForeColor = System.Drawing.SystemColors.Control;
+            this.Autorzy.Name = "Autorzy";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -226,6 +235,8 @@ namespace Gra
             this.Controls.Add(this.Menu);
             this.Name = "Form1";
             this.Menu.ResumeLayout(false);
+            this.panelStopka.ResumeLayout(false);
+            this.panelStopka.PerformLayout();
             this.OpcjePanel.ResumeLayout(false);
             this.StartPanel.ResumeLayout(false);
             this.StartPanel.PerformLayout();
@@ -262,6 +273,7 @@ namespace Gra
         private System.Windows.Forms.RadioButton RadioTrudny;
         private System.Windows.Forms.RadioButton RadioSredni;
         private System.Windows.Forms.RadioButton RadioLatwy;
+        private System.Windows.Forms.Label Autorzy;
     }
 }
 

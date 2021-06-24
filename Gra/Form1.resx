@@ -117,18 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Autorzy.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Autorzy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 29</value>
+  </data>
+  <data name="Autorzy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 13</value>
+  </data>
+  <data name="Autorzy.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Autorzy.Text" xml:space="preserve">
+    <value>Autorzy: Bartosz Kalbarczyk, Igor Tatara 205IC A2</value>
+  </data>
+  <data name="&gt;&gt;Autorzy.Name" xml:space="preserve">
+    <value>Autorzy</value>
+  </data>
+  <data name="&gt;&gt;Autorzy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Autorzy.Parent" xml:space="preserve">
+    <value>panelStopka</value>
+  </data>
+  <data name="&gt;&gt;Autorzy.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panelStopka.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panelStopka.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 455</value>
   </data>
   <data name="panelStopka.Size" type="System.Drawing.Size, System.Drawing">
     <value>922, 51</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panelStopka.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
@@ -177,6 +204,30 @@
   <data name="&gt;&gt;ExitButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="InstrukcjaButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="InstrukcjaButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="InstrukcjaButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="InstrukcjaButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="InstrukcjaButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 84</value>
+  </data>
+  <data name="InstrukcjaButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 42</value>
+  </data>
+  <data name="InstrukcjaButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="InstrukcjaButton.Text" xml:space="preserve">
+    <value>Instrukcja</value>
+  </data>
   <data name="&gt;&gt;InstrukcjaButton.Name" xml:space="preserve">
     <value>InstrukcjaButton</value>
   </data>
@@ -189,6 +240,27 @@
   <data name="&gt;&gt;InstrukcjaButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="GrafikaButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GrafikaButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="GrafikaButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="GrafikaButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 42</value>
+  </data>
+  <data name="GrafikaButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 42</value>
+  </data>
+  <data name="GrafikaButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GrafikaButton.Text" xml:space="preserve">
+    <value>Grafika</value>
+  </data>
   <data name="&gt;&gt;GrafikaButton.Name" xml:space="preserve">
     <value>GrafikaButton</value>
   </data>
@@ -200,6 +272,27 @@
   </data>
   <data name="&gt;&gt;GrafikaButton.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="DzwiekButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="DzwiekButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="DzwiekButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="DzwiekButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="DzwiekButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 42</value>
+  </data>
+  <data name="DzwiekButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="DzwiekButton.Text" xml:space="preserve">
+    <value>Dźwięk</value>
   </data>
   <data name="&gt;&gt;DzwiekButton.Name" xml:space="preserve">
     <value>DzwiekButton</value>
@@ -588,6 +681,29 @@
   <data name="&gt;&gt;StartButton.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="axWindowsMediaPlayer1.Enabled" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="axWindowsMediaPlayer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 32</value>
+  </data>
+  <data name="axWindowsMediaPlayer1.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAtwAAAAIB
+        AAAAAQAAAAAAAAAAAAAAAKIAAAAAAwAACAAAAAAABQAAAAAAAADwPwMAAAAAAAUAAAAAAAAAAAAIAAIA
+        AAAAAAMAAQAAAAsA//8DAAAAAAALAP//CAACAAAAAAADADIAAAALAAAACAAKAAAAZgB1AGwAbAAAAAsA
+        AAALAAAACwD//wsA//8LAAAACAACAAAAAAAIAAIAAAAAAAgAAgAAAAAACAACAAAAAAALAAAAwAcAAGEC
+        AAAL
+</value>
+  </data>
+  <data name="axWindowsMediaPlayer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="axWindowsMediaPlayer1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;axWindowsMediaPlayer1.Name" xml:space="preserve">
     <value>axWindowsMediaPlayer1</value>
   </data>
@@ -646,143 +762,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Menu.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="InstrukcjaButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="InstrukcjaButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="InstrukcjaButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="InstrukcjaButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="InstrukcjaButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 84</value>
-  </data>
-  <data name="InstrukcjaButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 42</value>
-  </data>
-  <data name="InstrukcjaButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="InstrukcjaButton.Text" xml:space="preserve">
-    <value>Instrukcja</value>
-  </data>
-  <data name="&gt;&gt;InstrukcjaButton.Name" xml:space="preserve">
-    <value>InstrukcjaButton</value>
-  </data>
-  <data name="&gt;&gt;InstrukcjaButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;InstrukcjaButton.Parent" xml:space="preserve">
-    <value>OpcjePanel</value>
-  </data>
-  <data name="&gt;&gt;InstrukcjaButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GrafikaButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="GrafikaButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="GrafikaButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="GrafikaButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 42</value>
-  </data>
-  <data name="GrafikaButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 42</value>
-  </data>
-  <data name="GrafikaButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="GrafikaButton.Text" xml:space="preserve">
-    <value>Grafika</value>
-  </data>
-  <data name="&gt;&gt;GrafikaButton.Name" xml:space="preserve">
-    <value>GrafikaButton</value>
-  </data>
-  <data name="&gt;&gt;GrafikaButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GrafikaButton.Parent" xml:space="preserve">
-    <value>OpcjePanel</value>
-  </data>
-  <data name="&gt;&gt;GrafikaButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="DzwiekButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="DzwiekButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="DzwiekButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="DzwiekButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="DzwiekButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 42</value>
-  </data>
-  <data name="DzwiekButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="DzwiekButton.Text" xml:space="preserve">
-    <value>Dźwięk</value>
-  </data>
-  <data name="&gt;&gt;DzwiekButton.Name" xml:space="preserve">
-    <value>DzwiekButton</value>
-  </data>
-  <data name="&gt;&gt;DzwiekButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DzwiekButton.Parent" xml:space="preserve">
-    <value>OpcjePanel</value>
-  </data>
-  <data name="&gt;&gt;DzwiekButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="axWindowsMediaPlayer1.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="axWindowsMediaPlayer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 32</value>
-  </data>
-  <data name="axWindowsMediaPlayer1.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAtwAAAAIB
-        AAAAAQAAAAAAAAAAAAAAAKIAAAAAAwAACAAAAAAABQAAAAAAAADwPwMAAAAAAAUAAAAAAAAAAAAIAAIA
-        AAAAAAMAAQAAAAsA//8DAAAAAAALAP//CAACAAAAAAADADIAAAALAAAACAAKAAAAZgB1AGwAbAAAAAsA
-        AAALAAAACwD//wsA//8LAAAACAACAAAAAAAIAAIAAAAAAAgAAgAAAAAACAACAAAAAAALAAAAwAcAAGEC
-        AAAL
-</value>
-  </data>
-  <data name="axWindowsMediaPlayer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="axWindowsMediaPlayer1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;axWindowsMediaPlayer1.Name" xml:space="preserve">
-    <value>axWindowsMediaPlayer1</value>
-  </data>
-  <data name="&gt;&gt;axWindowsMediaPlayer1.Type" xml:space="preserve">
-    <value>AxWMPLib.AxWindowsMediaPlayer, AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;axWindowsMediaPlayer1.Parent" xml:space="preserve">
-    <value>panelNaglowek</value>
-  </data>
-  <data name="&gt;&gt;axWindowsMediaPlayer1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="serviceController1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
